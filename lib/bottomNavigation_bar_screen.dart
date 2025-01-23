@@ -1,5 +1,6 @@
 import 'package:buddypair/utils/color_constants.dart';
 import 'package:buddypair/view/discover/screens/discover_screen.dart';
+import 'package:buddypair/view/matches/screens/matches_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'view/home_screen/screens/home_screen.dart';
@@ -18,7 +19,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     HomeScreen(),
     DiscoverScreen(),
     LocationScreen(),
-    GradientScreen(),
+   MatchesPage(),
     GroupScreen(),
   ];
 
