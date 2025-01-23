@@ -217,6 +217,7 @@ class DiscoverScreen extends StatelessWidget {
                                                 fontWeight: FontWeight.bold))
                                       ],
                                     ),
+                                    
                                     Text(
                                       'Germany',
                                       style: TextStyle(
@@ -252,9 +253,10 @@ class DiscoverScreen extends StatelessWidget {
              AppbarfontsConstants(title: 'Around Me', color: ColorConstants.blackColor, fontSize: 20,),
               Row(
                 children: [
-                  Text('People With'),
-                  Text('"Music"'),
-                  Text('Intrested Around You')
+                  AppbarfontsConstants(title: 'People With', color: ColorConstants.grayColor, fontSize: 14,),
+              AppbarfontsConstants(title: '"Music"', color: ColorConstants.pinkColor, fontSize: 14,),
+               AppbarfontsConstants(title: 'Intrested Around You', color: ColorConstants.grayColor, fontSize: 14,),
+               
                 ],
               ),
               Container(

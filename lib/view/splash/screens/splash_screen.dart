@@ -151,9 +151,9 @@ class _RotationWidgetState extends State<RotationWidget>
   final List<String> profileImages = [
     'assets/images/profile pic 2.png',
     'assets/images/Group 937.png',
-    'assets/images/Group 935.png',
-    'assets/images/Group 936.png',
-    'assets/images/Group 934.png',
+    'assets/images/Mask Group1.png',
+    'assets/images/Mask Group2.png',
+    'assets/images/Mask Group.png',
   ];
 
   @override
