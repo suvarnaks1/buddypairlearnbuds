@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppbarfontsConstants extends StatelessWidget {
   final String title;
@@ -16,14 +17,12 @@ class AppbarfontsConstants extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(
-        fontFamily: 'Aldrich',
-        fontWeight: FontWeight.w400,
+      style: GoogleFonts.aldrich( fontWeight: FontWeight.w400,
         fontSize: fontSize,
         height: 30 / 24,
-        color: color,
-       
-      ),
+        color: color,)
+      
+     
     );
   }
 }
