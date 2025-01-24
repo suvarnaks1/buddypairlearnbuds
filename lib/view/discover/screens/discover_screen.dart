@@ -1,4 +1,4 @@
-import 'package:buddypair/utils/color_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -95,25 +95,23 @@ class DiscoverScreen extends StatelessWidget {
                 Spacer(),
                 CircleAvatar(
                   radius: 20,
-                  backgroundColor: Colors.black,
+                  backgroundColor: ColorConstants.grayColor,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 19,
                     child: Center(
-                        child: IconButton(
-                            onPressed: () {}, icon: Icon(Icons.search))),
+                        child: Image.asset('assets/images/search.png')),
                   ),
                 ),
                 SizedBox(width: 10),
                 CircleAvatar(
                   radius: 20,
-                  backgroundColor: Colors.black,
+                   backgroundColor: ColorConstants.grayColor,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 19,
                     child: Center(
-                        child: IconButton(
-                            onPressed: () {}, icon: Icon(Icons.menu))),
+                        child: Image.asset('assets/images/sort_logo.jpg')),
                   ),
                 ),
               ],
@@ -259,11 +257,12 @@ class DiscoverScreen extends StatelessWidget {
                
                 ],
               ),
+              SizedBox(height: 10,),
               Container(
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Colors.amber,
+               
                     image: DecorationImage(
                       image: AssetImage('assets/images/Maps.png'),
                       fit: BoxFit.cover,
