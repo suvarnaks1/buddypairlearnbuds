@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../common/appbarfonts_constants.dart';
+import '../common/circular_container.dart';
 
 class LocationScreen extends StatelessWidget {
   const LocationScreen({super.key});
@@ -11,28 +12,26 @@ class LocationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CircleAvatar(
-              child: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-            ),
-            AppbarfontsConstants(title: 'Location', color: ColorConstants.blackColor, fontSize: 24.0,),
-            // Text(
-            //   "Location",
-            //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            // ),
-            CircleAvatar(
-              child: IconButton(
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              circularContainer(
+                imagePath: "assets/images/arrow.png",
                 onPressed: () {},
-                icon: Icon(Icons.tune),
               ),
-            ),
-          ],
+              AppbarfontsConstants(
+                title: 'Location',
+                color: ColorConstants.blackColor,
+                  fontSize: 24),
+              circularContainer(
+                imagePath: "assets/images/sort_logo.jpg",
+                  onPressed: () {},
+              ),
+            ],
+          ),
         ),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -60,35 +59,22 @@ class LocationScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Row(
               children: [
-                Text(
-                  'Your Matches',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
-                ),
+                AppbarfontsConstants(title: 'Your Matches', color: ColorConstants.primaryColor, fontSize: 20),
+              
                 const SizedBox(width: 5),
-                Text(
-                  '47 ',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFFDD88CF),
-                  ),
-                ),
+                  AppbarfontsConstants(title: '47', color: ColorConstants.pinkColor, fontSize: 20),
               ],
             ),
             const SizedBox(height: 10),
             Expanded(
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // Number of items in each row
+                  crossAxisCount: 2, 
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
-                  childAspectRatio: 2 / 3, // Adjust based on your design
+                  childAspectRatio: 2 / 3, 
                 ),
-                itemCount: 6, // Number of items
+                itemCount: 6, 
                 itemBuilder: (context, index) {
                   return MatchCard();
                 },
@@ -114,15 +100,15 @@ class LocationScreen extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 34,
-              backgroundColor: Color(0xFFDD88CF),
+              backgroundColor: ColorConstants.pinkColor
             ),
             CircleAvatar(
               radius: 31,
-              backgroundColor: Colors.white,
+              backgroundColor: ColorConstants.whiteColor
             ),
             CircleAvatar(
               radius: 28,
-              backgroundColor: Color(0xFFC4C4C4),
+              backgroundColor: ColorConstants.grayColor,
               child: Icon(
                 icon,
                 color: Colors.white,
@@ -138,18 +124,24 @@ class LocationScreen extends StatelessWidget {
               TextSpan(
                 text: '$text ',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 14,
+        height: 30 / 24,
+        color: ColorConstants.blackColor,
+       
+      ),
               ),
               TextSpan(
                 text: count,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFDD88CF),
-                ),
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 14,
+        height: 30 / 24,
+        color: ColorConstants.pinkColor,
+       
+      ),
               ),
             ],
           ),
@@ -165,7 +157,7 @@ class MatchCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           border: Border.all(
-            color: Color(0xFFDD88CF), // Border color
+            color: ColorConstants.pinkColor, 
             width: 3.0,
           ),
           borderRadius: BorderRadius.circular(25)),
@@ -186,18 +178,12 @@ class MatchCard extends StatelessWidget {
               width: 120,
               height: 35,
               decoration: BoxDecoration(
-                  color: Color(0xFFDD88CF),
+                  color: ColorConstants.pinkColor,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(25),
                       bottomRight: Radius.circular(25))),
               child: Center(
-                child: Text(
-                  '100% Match',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
-                ),
+                child: AppbarfontsConstants(title: '100% Match', color: ColorConstants.whiteColor, fontSize: 12)
               ),
             ),
           ),
@@ -208,38 +194,49 @@ class MatchCard extends StatelessWidget {
               width: 100,
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.white,
+                    color: ColorConstants.whiteColor.withOpacity(0.3),
                     width: 1.0,
                   ),
                   color: Colors.grey.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(25)),
+                  borderRadius: BorderRadius.circular(32)),
               child: Center(
-                child: Text(
-                  '1.8 km away',
-                  style: TextStyle(color: Colors.white),
-                ),
+                child: AppbarfontsConstants(title: '1.8 km away', color: ColorConstants.whiteColor, fontSize: 11)
+              
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 180, left: 45),
+            padding: EdgeInsets.only(top: 185, left: 45),
             child: Row(
               children: [
-                Text('Rahul,',
-                    style: GoogleFonts.oswald(
-                        color: Colors.white, fontWeight: FontWeight.bold)),
+                Text('Rahul',
+                    style:  TextStyle(
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+        height: 30 / 24,
+        color: ColorConstants.whiteColor,
+       
+      ),),
+      SizedBox(width: 5,),
                 Text('26',
-                    style: GoogleFonts.oswald(
-                        color: Colors.white, fontWeight: FontWeight.bold))
+                    style:  TextStyle(
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 18,
+        height: 30 / 24,
+        color: ColorConstants.whiteColor,
+       
+      ),),
+      SizedBox(width: 5,),
+      CircleAvatar(radius: 4,backgroundColor:ColorConstants.greenColor ,)
               ],
             ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 205, left: 40),
-            child: Text(
-              'Malappuram',
-              style: TextStyle(fontSize: 16, color: Colors.white),
-            ),
+            child: AppbarfontsConstants(title: 'Malappuram', color: ColorConstants.whiteColor.withOpacity(0.5), fontSize: 11)
+          
           )
         ],
       ),
