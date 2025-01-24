@@ -1,4 +1,4 @@
-import 'package:buddypair/utils/color_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

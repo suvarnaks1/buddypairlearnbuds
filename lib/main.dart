@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/buttomNavigation',
+      initialRoute: '/',
       routes: {
         '/': (context) => SplashScreen (),
         '/buttomNavigation':(context)=>  BottomNavBarExample(),
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         '/intrestedScreen': (context) => IntrestedScreen(),
         '/homeScreen':(context)=>HomeScreen(),
         '/locationScreen':(context)=>LocationScreen(),
-
+        
         '/discoverScreen':(context)=>DiscoverScreen()
       },
     );

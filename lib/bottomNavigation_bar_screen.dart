@@ -1,4 +1,6 @@
+import 'package:buddypair/common/color_constants.dart';
 import 'package:buddypair/view/discover/screens/discover_screen.dart';
+import 'package:buddypair/view/matches/screens/matches_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'view/home_screen/screens/home_screen.dart';
@@ -16,10 +18,9 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
   final List<Widget> _pages = [
     HomeScreen(),
     DiscoverScreen(),
-   LocationScreen (),
-    GradientScreen(),
+    LocationScreen(),
+   MatchesPage(),
     GroupScreen(),
-    //ChatScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -38,10 +39,10 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 75,
+          height: 64,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(40),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.3),
@@ -56,43 +57,49 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
             backgroundColor: Colors.transparent,
             elevation: 0,
             type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.pinkAccent, // Highlight selected icon
-            unselectedItemColor: Colors.grey, // Grey for unselected icons
-            selectedIconTheme: IconThemeData(color: Colors.pinkAccent),
-            unselectedIconTheme: IconThemeData(color: Colors.grey),
+            selectedItemColor: Colors.pinkAccent,
+            unselectedItemColor: Colors.grey,
+            selectedIconTheme:
+                IconThemeData(color: Colors.pinkAccent, size: 30),
+            unselectedIconTheme: IconThemeData(color: Colors.grey, size: 30),
+            selectedFontSize: 0,
+            unselectedFontSize: 0,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.eco),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        colors: [Colors.red, Colors.blue, Colors.green, Colors.yellow],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                    ),
+                icon: _buildIconWithCircle(
+                  icon: Image.asset(
+                    'assets/images/homeicon.png',
                   ),
+                  isSelected: _selectedIndex == 0,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.group),
+                icon: _buildIconWithCircle(
+                  icon: Image.asset('assets/images/Discover.png'),
+                  isSelected: _selectedIndex == 1,
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.chat_bubble_outline),
+                icon: _buildIconWithCircle(
+                  icon: Image.asset('assets/images/Gradient.png'),
+                  isSelected: _selectedIndex == 2,
+                ),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: _buildIconWithCircle(
+                  icon: Image.asset('assets/images/Matches.png'),
+                  isSelected: _selectedIndex == 3,
+                ),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: _buildIconWithCircle(
+                  icon: Image.asset('assets/images/Message.png'),
+                  isSelected: _selectedIndex == 4,
+                ),
                 label: '',
               ),
             ],
@@ -103,7 +110,17 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
   }
 }
 
-
+Widget _buildIconWithCircle({required Widget icon, required bool isSelected}) {
+  return isSelected
+      ? Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+              shape: BoxShape.circle, color: ColorConstants.pinkColor),
+          child: Center(child: icon),
+        )
+      : icon;
+}
 
 class EcoScreen extends StatelessWidget {
   @override
