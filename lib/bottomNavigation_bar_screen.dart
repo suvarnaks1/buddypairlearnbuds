@@ -19,7 +19,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     HomeScreen(),
     DiscoverScreen(),
     LocationScreen(),
-   MatchesPage(),
+   MatchesScreen(),
     GroupScreen(),
   ];
 

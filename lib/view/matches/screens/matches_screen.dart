@@ -1,16 +1,19 @@
 import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 import '../../../common/circular_container.dart';
 
-class MatchesPage extends StatelessWidget {
+class  MatchesScreen extends StatelessWidget {
+  const  MatchesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
           automaticallyImplyLeading: false,
+          centerTitle: true,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -19,164 +22,74 @@ class MatchesPage extends StatelessWidget {
                 onPressed: () {},
               ),
               AppbarfontsConstants(
-                  title: 'Matches',
-                  color: ColorConstants.blackColor,
+                title: 'Matches',
+                color: ColorConstants.blackColor,
                   fontSize: 24),
               circularContainer(
                 imagePath: "assets/images/sort_logo.jpg",
-                onPressed: () {},
+                  onPressed: () {},
               ),
             ],
           ),
         ),
-        body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          child:
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start, 
-                children: [
-                   Row(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 20),
+            Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(width: 5,),
                 _buildIconButton(
-                 imagePath: 'assets/images/love.png',
+                  icon: Icons.favorite,
                   text: 'Likes',
                   count: '32',
-                  iconBackgroundColor: Color(0xFFDD88CF), 
+                  iconBackgroundColor: Color(0xFFDD88CF),
                 ),
                 const SizedBox(width: 20),
                 _buildIconButton(
-                 imagePath: 'assets/images/comment.png',
+                  icon: Icons.chat_bubble,
                   text: 'Connect',
                   count: '15',
-                  iconBackgroundColor: Color(0xFFDD88CF), 
+                  iconBackgroundColor: Color(0xFFDD88CF),
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 20),
             Row(
               children: [
-                SizedBox(
-                  width: 5,
-                ),
-                AppbarfontsConstants(
-                    title: 'Your Matches',
-                    color: ColorConstants.primaryColor,
-                    fontSize: 20),
-                SizedBox(
-                  width: 5,
-                ),
-                AppbarfontsConstants(
-                    title: '47', color: ColorConstants.pinkColor, fontSize: 20)
+                AppbarfontsConstants(title: 'Your Matches', color: ColorConstants.primaryColor, fontSize: 20),
+              
+                const SizedBox(width: 5),
+                  AppbarfontsConstants(title: '47', color: ColorConstants.pinkColor, fontSize: 20),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
-                child: GridView.builder(
-                    itemCount: 6,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      childAspectRatio: 0.6,
-                    ),
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                              color: ColorConstants.pinkColor,
-                              width: 4,
-                            ),
-                            borderRadius: BorderRadius.circular(24)),
-                        child: Stack(
-                          children: [
-                            Container(
-                              width: double.maxFinite,
-                              height: double.maxFinite,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(24),
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          "assets/images/download.jpg"),
-                                      fit: BoxFit.fill)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 25),
-                              child: Container(
-                                width: 120,
-                                height: 35,
-                                decoration: BoxDecoration(
-                                    color: Color(0xFFDD88CF),
-                                    borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(25),
-                                        bottomRight: Radius.circular(25))),
-                                child: Center(
-                                    child: AppbarfontsConstants(
-                                        title: "100%  Match",
-                                        color: ColorConstants.whiteColor,
-                                        fontSize: 12)),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 185, left: 30),
-                              child: Container(
-                                height: 30,
-                                width: 90,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                    color: Colors.white,
-                                    width: 1.0,
-                                  ),
-                                  color: Colors.grey.withOpacity(0.5),
-                                ),
-                                child: Center(
-                                    child: AppbarfontsConstants(
-                                        title: '1.3 km away',
-                                        color: ColorConstants.whiteColor,
-                                        fontSize: 11)),
-                              ),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(top: 225, left: 30),
-                                child: Row(
-                                  children: [
-                                    AppbarfontsConstants(
-                                        title: 'James',
-                                        color: ColorConstants.whiteColor,
-                                        fontSize: 18),
-                                         AppbarfontsConstants(
-                                        title: '16',
-                                        color: ColorConstants.whiteColor,
-                                        fontSize: 18),
-                                  ],
-                                )
-                              
-                                ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 255, left: 40),
-                              child:  AppbarfontsConstants(
-                                        title: 'Hanover',
-                                        color: ColorConstants.whiteColor,
-                                        fontSize: 11),
-                            )
-                          ],
-                        ),
-                      );
-                    }),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, 
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 2 / 3, 
+                ),
+                itemCount: 6, 
+                itemBuilder: (context, index) {
+                  return MatchCard();
+                },
               ),
             ),
-          ]),
-        ));
+          ],
+        ),
+      ),
+    );
   }
-   Widget _buildIconButton({
-    required String imagePath,
+
+  Widget _buildIconButton({
+    required IconData icon,
     required String text,
-    required String count, 
+    required String count,
     required Color iconBackgroundColor,
   }) {
     return Column(
@@ -187,21 +100,20 @@ class MatchesPage extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 34,
-              backgroundColor: Color(0xFFDD88CF),
+              backgroundColor: ColorConstants.pinkColor
             ),
             CircleAvatar(
               radius: 31,
-              backgroundColor: Colors.white,
+              backgroundColor: ColorConstants.whiteColor
             ),
             CircleAvatar(
               radius: 28,
-              backgroundColor: Color(0xFFC4C4C4),
-               child: Image.asset(
-              imagePath ,
-              width: 24,
-              height: 24,
-              fit: BoxFit.contain,
-            ),
+              backgroundColor: ColorConstants.grayColor,
+              child: Icon(
+                icon,
+                color: Colors.white,
+                size: 24,
+              ),
             ),
           ],
         ),
@@ -212,23 +124,122 @@ class MatchesPage extends StatelessWidget {
               TextSpan(
                 text: '$text ',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 14,
+        height: 30 / 24,
+        color: ColorConstants.blackColor,
+       
+      ),
               ),
               TextSpan(
                 text: count,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFDD88CF),
-                ),
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 14,
+        height: 30 / 24,
+        color: ColorConstants.pinkColor,
+       
+      ),
               ),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class MatchCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(
+            color: ColorConstants.pinkColor, 
+            width: 3.0,
+          ),
+          borderRadius: BorderRadius.circular(25)),
+      child: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/download.jpg'),
+                    fit: BoxFit.fill)),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 25),
+            child: Container(
+              width: 120,
+              height: 35,
+              decoration: BoxDecoration(
+                  color: ColorConstants.pinkColor,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(25),
+                      bottomRight: Radius.circular(25))),
+              child: Center(
+                child: AppbarfontsConstants(title: '100% Match', color: ColorConstants.whiteColor, fontSize: 12)
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 140, left: 30),
+            child: Container(
+              height: 30,
+              width: 100,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: ColorConstants.whiteColor.withOpacity(0.3),
+                    width: 1.0,
+                  ),
+                  color: Colors.grey.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(32)),
+              child: Center(
+                child: AppbarfontsConstants(title: '1.8 km away', color: ColorConstants.whiteColor, fontSize: 11)
+              
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 185, left: 45),
+            child: Row(
+              children: [
+                Text('Rahul',
+                    style:  TextStyle(
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+        height: 30 / 24,
+        color: ColorConstants.whiteColor,
+       
+      ),),
+      SizedBox(width: 5,),
+                Text('26',
+                    style:  TextStyle(
+        fontFamily: 'Aldrich',
+        fontWeight: FontWeight.w400,
+        fontSize: 18,
+        height: 30 / 24,
+        color: ColorConstants.whiteColor,
+       
+      ),),
+      SizedBox(width: 5,),
+      CircleAvatar(radius: 4,backgroundColor:ColorConstants.greenColor ,)
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 205, left: 40),
+            child: AppbarfontsConstants(title: 'Malappuram', color: ColorConstants.whiteColor.withOpacity(0.5), fontSize: 11)
+          
+          )
+        ],
+      ),
     );
   }
 }
