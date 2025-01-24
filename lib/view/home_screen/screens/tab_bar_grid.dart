@@ -1,4 +1,5 @@
 
+import 'package:buddypair/view/matches/screens/matches_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'qualifications/screens/qualification_screen.dart';
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreens> {
                         width: 350,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10)),
-                        child: Tab(text: "Location")),
+                        child: Tab(text: "Near By")),
                     Container(
                         height: 50,
                         width: 400,
@@ -64,14 +65,14 @@ class _HomeScreenState extends State<HomeScreens> {
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 10,
               ),
               Expanded(
                 child: TabBarView(children: [
                   LocationTab(),
                   DesignationTab(),
-                // QualificationScreen()
-                QualificationTab()
+                 QualificationScreen()
+              
                 ]),
               )
             ],
@@ -88,11 +89,7 @@ Widget DesignationTab() {
   );
 }
 
-Widget QualificationTab() {
-  return Column(
-    children: [],
-  );
-}
+
 
 class LocationTab extends StatelessWidget {
   @override

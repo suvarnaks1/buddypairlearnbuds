@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'auth/screens/sign_up_page.dart';
+import '../../auth/screens/sign_up_page.dart';
 
 class JobStatusScreen extends StatefulWidget {
   @override

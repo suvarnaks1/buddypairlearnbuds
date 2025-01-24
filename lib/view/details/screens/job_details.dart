@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'auth/screens/sign_up_page.dart';
+import '../../auth/screens/sign_up_page.dart';
 
 class JobDetailsScreen extends StatelessWidget {
   const JobDetailsScreen({super.key});
