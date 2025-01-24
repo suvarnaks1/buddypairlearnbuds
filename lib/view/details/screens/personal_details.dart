@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'auth/screens/sign_up_page.dart';
+import '../../auth/screens/sign_up_page.dart';
 
 class PersonalDetailsScreen extends StatelessWidget {
   const PersonalDetailsScreen({super.key});
