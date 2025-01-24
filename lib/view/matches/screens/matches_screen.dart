@@ -76,7 +76,10 @@ class  MatchesScreen extends StatelessWidget {
                 ),
                 itemCount: 6, 
                 itemBuilder: (context, index) {
-                  return MatchCard();
+                  return GestureDetector(onTap: (){
+                    Navigator.pushNamed(context, '/matchesViewScreen'); 
+                  },
+                    child: MatchCard());
                 },
               ),
             ),
