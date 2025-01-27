@@ -8,11 +8,11 @@ class IntrestedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(9.0),
-        child: Center(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
           child: Container(
-            height: 250,
+            height: 300,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
@@ -26,36 +26,32 @@ class IntrestedScreen extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height:20
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  Center(
+                    child: Text(
+                      'Intrested',
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
-                    Center(
-                      child: Text(
-                        'Intrested',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    CustomButtom(
-                      boxcolor: Colors.black,
-                      title: 'Next',
-                      ontap: () {
-                           Navigator.pushNamed(context, '/buttomNavigation'); 
-                      },
-                    ),
-                    SizedBox(height: 20),
-                    CustomButtom(
-                      boxcolor: Colors.black,
-                      title: 'Next',
-                      ontap: () {
-                          // Navigator.pushNamed(context, '/jobStatus'); 
-                      },
-                    ),
-                  ],
-                ),
+                  ),
+                  SizedBox(height: 20),
+                  CustomButtom(
+                    boxcolor: Colors.black,
+                    title: 'Next',
+                    ontap: () {
+                      Navigator.pushNamed(context, '/buttomNavigation');
+                    },
+                  ),
+                  SizedBox(height: 20),
+                  CustomButtom(
+                    boxcolor: Colors.black,
+                    title: 'Next',
+                    ontap: () {
+                      // Navigator.pushNamed(context, '/jobStatus');
+                    },
+                  ),
+                ],
               ),
             ),
           ),
