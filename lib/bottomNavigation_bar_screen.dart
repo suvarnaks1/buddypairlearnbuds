@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'view/home_screen/screens/home_screen.dart';
 import 'view/location_screen.dart';
+import 'view/recent_messages/screens/recent_messages.dart';
 
 class BottomNavBarExample extends StatefulWidget {
   @override
@@ -21,7 +22,8 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     DiscoverScreen(),
     LocationScreen(),
    MatchesScreen(),
-  ViewedMyProfile()
+  RecentMessages(),
+  // ViewedMyProfile()
   ];
 
   void _onItemTapped(int index) {
