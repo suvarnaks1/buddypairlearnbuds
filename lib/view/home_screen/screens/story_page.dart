@@ -1,4 +1,6 @@
 
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class Story extends StatelessWidget {
@@ -12,7 +14,7 @@ class Story extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 38,
-              backgroundImage: AssetImage("assets/images/g.jpg"),
+              backgroundImage: AssetImage("assets/images/Mask Group1.png"),
             ),
             Positioned(
               left: 54,
@@ -32,7 +34,7 @@ class Story extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 80,
+              top: 90,
               left: 8,
               child: Text(
                 "Your Story",
@@ -96,10 +98,7 @@ class Story extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    const Text(
-                      "Suvarna",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )
+                   AppbarfontsConstants(title: 'Rahul', color: ColorConstants.blackColor, fontSize: 14)
                   ],
                 );
               },

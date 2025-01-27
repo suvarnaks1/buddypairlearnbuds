@@ -89,7 +89,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
                 ),
                 label: '',
               ),
-              BottomNavigationBarItem(
+              BottomNavigationBarItem( 
                 icon: _buildIconWithCircle(
                   icon: Image.asset('assets/images/Matches.png'),
                   isSelected: _selectedIndex == 3,
