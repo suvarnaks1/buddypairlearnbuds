@@ -1,5 +1,7 @@
 
-import 'package:buddypair/view/matches/screens/matches_screen.dart';
+
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'qualifications/screens/qualification_screen.dart';
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreens> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: Color(0xFFFCF7FD),
+        backgroundColor: ColorConstants.whiteColor,
         body: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreens> {
                 margin: const EdgeInsets.symmetric(horizontal: 6),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 3),
-                  color: Color(0xFFF8E7F6),
+                  color: ColorConstants.lightPinkColor,
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
                 child: TabBar(
@@ -38,7 +40,7 @@ class _HomeScreenState extends State<HomeScreens> {
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.white,
                   ),
-                  labelColor: Colors.blue,
+                  labelColor: ColorConstants.blueColor,
                   unselectedLabelColor: Colors.black,
                   tabs: [
                     Container(
@@ -46,7 +48,7 @@ class _HomeScreenState extends State<HomeScreens> {
                         width: 350,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10)),
-                        child: Tab(text: "Near By")),
+                        child: Tab(text: "Near By",)),
                     Container(
                         height: 50,
                         width: 400,
@@ -131,35 +133,17 @@ class LocationTab extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               border:
                                   Border.all(width: 1, color: Colors.white38)),
-                          child: Text(
-                            'Online',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          child:AppbarfontsConstants(title: 'Online', color: ColorConstants.whiteColor, fontSize: 10)
+                          
                         ),
                       ),
                       Spacer(),
                       Row(
                         children: [
-                          Text(
-                            'Sithara Nair',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
+                         AppbarfontsConstants(title: 'Sithara Nair', color: ColorConstants.whiteColor, fontSize: 10),
                           Spacer(),
-                          Text(
-                            'F, 28 YRS',
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 241, 236, 236),
-                              fontSize: 11,
-                            ),
-                          ),
+                           AppbarfontsConstants(title: 'F, 28 YRS', color: ColorConstants.whiteColor, fontSize: 10),
+                         
                         ],
                       ),
                       Text(

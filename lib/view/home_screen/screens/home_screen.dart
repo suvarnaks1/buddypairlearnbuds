@@ -1,8 +1,9 @@
-import 'package:buddypair/view/home_screen/screens/qualifications/screens/qualification_screen.dart';
-import 'package:flutter/material.dart';
 
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/circular_container.dart';
+import 'package:buddypair/common/color_constants.dart';
+import 'package:flutter/material.dart';
 import 'story_page.dart';
-import 'home_screen_gridviewbuilder.dart';
 import 'tab_bar_grid.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,11 +17,9 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         title: Row(
           children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
-            const Text(
-              'Buddy Pair',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
+            Image.asset('assets/images/buddypairmenu.png'),SizedBox(width: 5,),
+            AppbarfontsConstants(title: 'Buddy pair', color: ColorConstants.primaryColor, fontSize: 24),
+           
             const Spacer(),
             Container(
               height: 40,
@@ -33,17 +32,14 @@ class HomeScreen extends StatelessWidget {
                   width: 1.0,
                 ),
               ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.notifications),
-              ),
+              child: Image.asset('assets/images/bellbutton.png')
             ),
             const SizedBox(
               width: 10,
             ),
             const CircleAvatar(
               radius: 20,
-              backgroundImage: AssetImage('assets/images/download.jpg'),
+              backgroundImage: AssetImage('assets/images/profile pic 3.png'),
             )
           ],
         ),
