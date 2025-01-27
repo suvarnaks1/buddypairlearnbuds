@@ -7,23 +7,22 @@ class PersonalDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(9.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
           child: Container(
             height: 900,
-            width: 500,
             decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 6,
-                offset: Offset(0, 2),
-              ),
-            ],
-          ),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 6,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
             child: Center(
               child: Column(
                 children: [
@@ -169,7 +168,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                           boxcolor: Colors.black,
                           title: 'Next',
                           ontap: () {
-                             Navigator.pushNamed(context, '/jobStatus'); 
+                            Navigator.pushNamed(context, '/jobStatus');
                           },
                         ),
                       ],

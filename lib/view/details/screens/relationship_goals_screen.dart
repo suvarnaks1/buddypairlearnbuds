@@ -17,60 +17,64 @@ class _RelationshipGoalsScreenState extends State<RelationshipGoalsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(9),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 6,
-                offset: Offset(0, 2),
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 6,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Relationship Goals",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  const SizedBox(height: 20),
+                  CheckboxListTile(
+                    title: Text("Short Term Relationship"),
+                    value: isEmployer,
+                    onChanged: (value) {
+                      setState(() {
+                        isEmployer = value!;
+                      });
+                    },
+                    controlAffinity: ListTileControlAffinity.leading,
+                  ),
+                  CheckboxListTile(
+                    title: Text("Long Term Relationship"),
+                    value: isEmployee,
+                    onChanged: (value) {
+                      setState(() {
+                        isEmployee = value!;
+                      });
+                    },
+                    controlAffinity: ListTileControlAffinity.leading,
+                  ),
+                  SizedBox(height: 20),
+                  CustomButtom(
+                    boxcolor: Colors.black,
+                    title: 'Next',
+                    ontap: () {
+                      Navigator.pushNamed(context, '/intrestedScreen');
+                    },
+                  ),
+                ],
               ),
-            ],
-          ),
-          width: 300,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Relationship Goals",
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-              const SizedBox(height: 20),
-              CheckboxListTile(
-                title: Text("Short Term Relationship"),
-                value: isEmployer,
-                onChanged: (value) {
-                  setState(() {
-                    isEmployer = value!;
-                  });
-                },
-                controlAffinity: ListTileControlAffinity.leading,
-              ),
-              CheckboxListTile(
-                title: Text("Long Term Relationship"),
-                value: isEmployee,
-                onChanged: (value) {
-                  setState(() {
-                    isEmployee = value!;
-                  });
-                },
-                controlAffinity: ListTileControlAffinity.leading,
-              ),
-              SizedBox(height: 20),
-              CustomButtom(
-                boxcolor: Colors.black,
-                title: 'Next',
-                ontap: () {
-                     Navigator.pushNamed(context, '/intrestedScreen'); 
-                },
-              ),
-            ],
+            ),
           ),
         ),
       ),

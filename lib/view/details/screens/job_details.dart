@@ -10,21 +10,21 @@ class JobDetailsScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(9.0),
+          padding: const EdgeInsets.all(15.0),
           child: Container(
-            height: 400,
-            width: 500,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 6,
-                offset: Offset(0, 2),
-              ),
-            ],
-          ),
+            height: 330,
+           
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 6,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -48,7 +48,7 @@ class JobDetailsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                         SizedBox(
+                      SizedBox(
                         height: 10,
                       ),
                       TextFormField(
@@ -60,7 +60,7 @@ class JobDetailsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                         SizedBox(
+                      SizedBox(
                         height: 10,
                       ),
                       TextFormField(
@@ -72,14 +72,14 @@ class JobDetailsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                        SizedBox(
+                      SizedBox(
                         height: 20,
                       ),
                       CustomButtom(
                         boxcolor: Colors.black,
                         title: 'Next',
                         ontap: () {
-                             Navigator.pushNamed(context, '/seekerJobDetails'); 
+                          Navigator.pushNamed(context, '/seekerJobDetails');
                         },
                       ),
                     ],

@@ -9,11 +9,11 @@ class LoginPageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-          padding: const EdgeInsets.all(9.0),
+          padding: const EdgeInsets.all(15.0),
           child: Center(
             child: Container(
               height: 400,
-              width: 500,
+             
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
