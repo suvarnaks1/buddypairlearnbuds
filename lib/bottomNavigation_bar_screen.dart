@@ -1,12 +1,14 @@
 import 'package:buddypair/common/color_constants.dart';
 import 'package:buddypair/view/discover/screens/discover_screen.dart';
+
 import 'package:buddypair/view/matches/screens/matches_screen.dart';
-import 'package:buddypair/view/viewed_my_profile.dart';
+
 import 'package:flutter/material.dart';
 
+import 'view/groups/screens/group_screen.dart';
 import 'view/home_screen/screens/home_screen.dart';
 import 'view/location_screen.dart';
-import 'view/recent_messages/screens/recent_messages.dart';
+
 
 class BottomNavBarExample extends StatefulWidget {
   @override
@@ -21,9 +23,10 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     HomeScreen(),
     DiscoverScreen(),
     LocationScreen(),
-   MatchesScreen(),
-  RecentMessages(),
-  // ViewedMyProfile()
+    MatchesScreen(),
+    GroupScreen()
+ // RecentMessages(),
+  
   ];
 
   void _onItemTapped(int index) {
@@ -125,50 +128,8 @@ Widget _buildIconWithCircle({required Widget icon, required bool isSelected}) {
       : icon;
 }
 
-class EcoScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Eco Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
 
-class GradientScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Gradient Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
 
-class GroupScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Group Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
 
-class ChatScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Chat Screen',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
+
+

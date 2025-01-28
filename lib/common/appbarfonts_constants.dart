@@ -54,3 +54,30 @@ class TabfontsConstants extends StatelessWidget {
     );
   }
 }
+
+
+class outfitFontsConstants extends StatelessWidget {
+  final String title;
+  final Color color;
+  final double fontSize;
+
+  const outfitFontsConstants(
+      {Key? key,
+      required this.title,
+      required this.color,
+      required this.fontSize})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: GoogleFonts.outfit( fontWeight: FontWeight.w400,
+        fontSize: fontSize,
+        height: 30 / 24,
+        color: color,)
+      
+     
+    );
+  }
+}
