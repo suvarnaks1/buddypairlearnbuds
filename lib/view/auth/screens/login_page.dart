@@ -13,7 +13,6 @@ class LoginPageScreen extends StatelessWidget {
           child: Center(
             child: Container(
               height: 400,
-             
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),

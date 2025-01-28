@@ -1,7 +1,6 @@
 import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../common/appbarfonts_constants.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -99,14 +98,14 @@ class DiscoverScreen extends StatelessWidget {
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 19,
-                    child: Center(
-                        child: Image.asset('assets/images/search.png')),
+                    child:
+                        Center(child: Image.asset('assets/images/search.png')),
                   ),
                 ),
                 SizedBox(width: 10),
                 CircleAvatar(
                   radius: 20,
-                   backgroundColor: ColorConstants.grayColor,
+                  backgroundColor: ColorConstants.grayColor,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 19,
@@ -215,7 +214,6 @@ class DiscoverScreen extends StatelessWidget {
                                                 fontWeight: FontWeight.bold))
                                       ],
                                     ),
-                                    
                                     Text(
                                       'Germany',
                                       style: TextStyle(
@@ -247,22 +245,38 @@ class DiscoverScreen extends StatelessWidget {
                       fontSize: 16),
                 ],
               ),
-              InterestsChips(),
-             AppbarfontsConstants(title: 'Around Me', color: ColorConstants.blackColor, fontSize: 20,),
+              IntrestsList(),
+              AppbarfontsConstants(
+                title: 'Around Me',
+                color: ColorConstants.blackColor,
+                fontSize: 20,
+              ),
               Row(
                 children: [
-                  AppbarfontsConstants(title: 'People With', color: ColorConstants.grayColor, fontSize: 14,),
-              AppbarfontsConstants(title: '"Music"', color: ColorConstants.pinkColor, fontSize: 14,),
-               AppbarfontsConstants(title: 'Intrested Around You', color: ColorConstants.grayColor, fontSize: 14,),
-               
+                  AppbarfontsConstants(
+                    title: 'People With',
+                    color: ColorConstants.grayColor,
+                    fontSize: 14,
+                  ),
+                  AppbarfontsConstants(
+                    title: '"Music"',
+                    color: ColorConstants.pinkColor,
+                    fontSize: 14,
+                  ),
+                  AppbarfontsConstants(
+                    title: 'Intrested Around You',
+                    color: ColorConstants.grayColor,
+                    fontSize: 14,
+                  ),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-               
                     image: DecorationImage(
                       image: AssetImage('assets/images/Maps.png'),
                       fit: BoxFit.cover,
@@ -277,53 +291,149 @@ class DiscoverScreen extends StatelessWidget {
   }
 }
 
-class InterestsChips extends StatefulWidget {
+class IntrestsList extends StatefulWidget {
   @override
-  _InterestsChipsState createState() => _InterestsChipsState();
+  _IntrestsListState createState() => _IntrestsListState();
 }
 
-class _InterestsChipsState extends State<InterestsChips> {
-  // Keep track of selected chips
-  final List<bool> _selectedChips = [false, false, false, false, false, false];
+class _IntrestsListState extends State<IntrestsList> {
+  String? selectedTag;
+
+  final List<Map<String, dynamic>> firstRowInterests = [
+    {'image': 'assets/images/football.png', 'label': 'Football'},
+    {'image': 'assets/images/tea-leaves.png', 'label': 'Nature'},
+    {'image': 'assets/images/world.png', 'label': 'Language'},
+    {'image': 'assets/images/airplane.png', 'label': 'Travel'},
+    {'image': 'assets/images/businessman.png', 'label': 'Jobs'},
+    {'image': 'assets/images/video.png', 'label': 'Reels'},
+  ];
+
+  final List<Map<String, dynamic>> secondRowInterests = [
+    {'image': 'assets/images/photography.png', 'label': 'Photography'},
+    {'image': 'assets/images/music.png', 'label': 'Music'},
+    {'image': 'assets/images/writing.png', 'label': 'Writing'},
+    {'image': 'assets/images/movie-clapper-open.png', 'label': 'Movies'},
+    {'image': 'assets/images/virtual.png', 'label': 'Technology'},
+    {'image': 'assets/images/woman.png', 'label': 'Fashion & Style'},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Wrap(
-        spacing: 8.0,
-        runSpacing: 8.0,
+      child: Column(
         children: [
-          _buildChip(0, 'Football', Icons.sports_soccer),
-          _buildChip(1, 'Nature', Icons.nature),
-          _buildChip(2, 'Language', Icons.language),
-          _buildChip(3, 'Photography', Icons.photo_camera),
-          _buildChip(4, 'Music', Icons.music_note),
-          _buildChip(5, 'Writing', Icons.edit),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildChip(int index, String label, IconData icon) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          // Toggle the selection state of the chip
-          _selectedChips[index] = !_selectedChips[index];
-        });
-      },
-      child: Chip(
-        avatar: Icon(icon, size: 16),
-        label: Text(
-          label,
-          style: TextStyle(
-            color: _selectedChips[index] ? Colors.white : Colors.black,
+          const SizedBox(height: 5),
+          // First Row (Scrollable)
+          SizedBox(
+            height: 50,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: firstRowInterests.map((interest) {
+                  bool isSelected = selectedTag == interest['label'];
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedTag = isSelected ? null : interest['label'];
+                      });
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(right: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 12),
+                      decoration: BoxDecoration(
+                        color:
+                            isSelected ? const Color(0xffdd88cf) : Colors.white,
+                        border: Border.all(
+                          color: isSelected
+                              ? const Color(0xffdd88cf)
+                              : Colors.grey,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            interest['image'],
+                            height: 24,
+                            width: 24,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            interest['label'],
+                            style: GoogleFonts.aldrich(
+                              fontSize: 16,
+                              color:
+                                  isSelected ? Colors.white : Color(0xff4b164c),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
           ),
-        ),
-        backgroundColor:
-            _selectedChips[index] ? Colors.purple.shade300 : Colors.white,
-        side: BorderSide(color: Colors.purple.shade300),
+          const SizedBox(height: 16),
+          // Second Row (Scrollable)
+          SizedBox(
+            height: 50,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: secondRowInterests.map((interest) {
+                  bool isSelected = selectedTag == interest['label'];
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedTag = isSelected ? null : interest['label'];
+                      });
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(right: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 12),
+                      decoration: BoxDecoration(
+                        color:
+                            isSelected ? const Color(0xffdd88cf) : Colors.white,
+                        border: Border.all(
+                          color: isSelected
+                              ? const Color(0xffdd88cf)
+                              : Colors.grey,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            interest['image'],
+                            height: 24,
+                            width: 24,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            interest['label'],
+                            style: GoogleFonts.aldrich(
+                              fontSize: 16,
+                              color:
+                                  isSelected ? Colors.white : Color(0xff4b164c),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
