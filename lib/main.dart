@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         '/relationShipGoalsScreen': (context) => RelationshipGoalsScreen(),
         '/intrestedScreen': (context) => IntrestedScreen(),
         '/homeScreen':(context)=>HomeScreen(),
-        '/locationScreen':(context)=>LocationScreen(),
+        '/locationScreen':(context)=>LocationScreen(), 
         '/matchesViewScreen':(context)=>MatchesViewScreen(),
         '/discoverScreen':(context)=>DiscoverScreen()
       },

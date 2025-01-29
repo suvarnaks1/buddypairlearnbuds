@@ -56,7 +56,7 @@ class GroupScreen extends StatelessWidget {
                         color: ColorConstants.pinkColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Image.asset('assets/images/search.png')),
+                      child: Image.asset('assets/images/search.png',color: ColorConstants.whiteColor,)),
                   SizedBox(width: 55),
                   AppbarfontsConstants(
                       title: 'Groups',
