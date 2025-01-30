@@ -53,6 +53,14 @@ class SettingsScreens extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                    Center(
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Image(
+                          image: AssetImage(
+                        "assets/images/Rectangle 1131.png",
+                      ))),
+                ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -256,7 +264,8 @@ class SettingsScreens extends StatelessWidget {
                               shape: BoxShape.circle,
                               color: Color(0xFFF2F8F7),
                             ),
-                            child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Image.asset(
                                   'assets/images/upperarrow.png',
