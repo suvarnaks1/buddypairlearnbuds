@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         '/intrestedScreen': (context) => IntrestedScreen(),
         '/homeScreen':(context)=>HomeScreen(),
         '/locationScreen':(context)=>LocationScreen(), 
-        '/matchesViewScreen':(context)=>MatchesViewScreen(),
+        '/matchesViewScreen':(context)=>MatchProfile(),
         '/discoverScreen':(context)=>DiscoverScreen(),
         '/sentScreen':(context)=>SentScreen()
       },

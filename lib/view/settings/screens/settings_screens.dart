@@ -53,14 +53,14 @@ class SettingsScreens extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                    Center(
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: Image(
-                          image: AssetImage(
-                        "assets/images/Rectangle 1131.png",
-                      ))),
-                ),
+                  Center(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: Image(
+                            image: AssetImage(
+                          "assets/images/Rectangle 1131.png",
+                        ))),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

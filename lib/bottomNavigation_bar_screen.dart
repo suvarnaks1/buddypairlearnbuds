@@ -7,6 +7,7 @@ import 'package:buddypair/view/settings/screens/settings_screens.dart';
 
 import 'package:flutter/material.dart';
 
+import 'view/groups/screens/create_group_screen.dart';
 import 'view/groups/screens/group_screen.dart';
 import 'view/home_screen/screens/home_screen.dart';
 import 'view/location_screen.dart';
@@ -24,10 +25,10 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
   final List<Widget> _pages = [
     HomeScreen(),
     DiscoverScreen(),
-    LocationScreen(),
+    CreateGroupScreen(),
     MatchesScreen(),
     SentScreen(),
-  // SettingsScreens(),
+  
   
   ];
 
