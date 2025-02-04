@@ -15,19 +15,15 @@ class AppbarfontsConstants extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.aldrich( fontWeight: FontWeight.w400,
-        fontSize: fontSize,
-        height: 30 / 24,
-        color: color,)
-      
-     
-    );
+    return Text(title,
+        style: GoogleFonts.aldrich(
+          fontWeight: FontWeight.w400,
+          fontSize: fontSize,
+          height: 30 / 24,
+          color: color,
+        ));
   }
 }
-
-
 
 class TabfontsConstants extends StatelessWidget {
   final String title;
@@ -43,18 +39,15 @@ class TabfontsConstants extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.abel( fontWeight: FontWeight.w400,
-        fontSize: fontSize,
-        height: 30 / 24,
-        color: color,)
-      
-     
-    );
+    return Text(title,
+        style: GoogleFonts.abel(
+          fontWeight: FontWeight.w400,
+          fontSize: fontSize,
+          height: 30 / 24,
+          color: color,
+        ));
   }
 }
-
 
 class outfitFontsConstants extends StatelessWidget {
   final String title;
@@ -70,18 +63,15 @@ class outfitFontsConstants extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.outfit( fontWeight: FontWeight.w400,
-        fontSize: fontSize,
-        height: 30 / 24,
-        color: color,)
-      
-     
-    );
+    return Text(title,
+        style: GoogleFonts.outfit(
+          fontWeight: FontWeight.w400,
+          fontSize: fontSize,
+          height: 30 / 24,
+          color: color,
+        ));
   }
 }
-
 
 class BoldFontsConstants extends StatelessWidget {
   final String title;
@@ -97,15 +87,12 @@ class BoldFontsConstants extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.outfit( fontWeight: FontWeight.bold,
-        fontSize: fontSize,
-        height: 30 / 24,
-        color: color,)
-      
-     
-    );
+    return Text(title,
+        style: GoogleFonts.outfit(
+          fontWeight: FontWeight.bold,
+          fontSize: fontSize,
+          height: 30 / 24,
+          color: color,
+        ));
   }
 }
-
