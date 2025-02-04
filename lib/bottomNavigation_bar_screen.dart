@@ -1,16 +1,11 @@
 import 'package:buddypair/common/color_constants.dart';
 import 'package:buddypair/view/discover/screens/discover_screen.dart';
-
 import 'package:buddypair/view/matches/screens/matches_screen.dart';
 import 'package:buddypair/view/requests/screens/sent_screen.dart';
-import 'package:buddypair/view/settings/screens/settings_screens.dart';
-
 import 'package:flutter/material.dart';
-
 import 'view/groups/screens/create_group_screen.dart';
-import 'view/groups/screens/group_screen.dart';
 import 'view/home_screen/screens/home_screen.dart';
-import 'view/location_screen.dart';
+
 
 
 class BottomNavBarExample extends StatefulWidget {
@@ -76,9 +71,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
             items: [
               BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Image.asset(
-                    'assets/images/homeicon.png',
-                  ),
+                  icon: Icon(Icons.home_outlined,color: ColorConstants.primaryColor,),
                   isSelected: _selectedIndex == 0,
                 ),
                 label: '',
@@ -99,14 +92,14 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
               ),
               BottomNavigationBarItem( 
                 icon: _buildIconWithCircle(
-                  icon: Image.asset('assets/images/Matches.png'),
+                  icon: Icon(Icons.person_outline,color: ColorConstants.primaryColor),
                   isSelected: _selectedIndex == 3,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Image.asset('assets/images/Message.png'),
+                  icon: Image.asset('assets/images/chat.png',color: ColorConstants.primaryColor,height: 24,),
                   isSelected: _selectedIndex == 4,
                 ),
                 label: '',

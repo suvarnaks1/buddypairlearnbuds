@@ -98,8 +98,14 @@ class DiscoverScreen extends StatelessWidget {
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 19,
-                    child:
-                        Center(child: Image.asset('assets/images/search.png')),
+                    child: Center(
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.search,
+                              size: 24,
+                              color: ColorConstants.primaryColor,
+                            ))),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -110,7 +116,7 @@ class DiscoverScreen extends StatelessWidget {
                     backgroundColor: Colors.white,
                     radius: 19,
                     child: Center(
-                        child: Image.asset('assets/images/sort_logo.jpg')),
+                        child: Image.asset('assets/images/filter.png')),
                   ),
                 ),
               ],

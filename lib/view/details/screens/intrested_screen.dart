@@ -38,7 +38,7 @@ class IntrestedScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   CustomButtom(
                     boxcolor: Colors.black,
-                    title: 'Next',
+                    title: 'Dating',
                     ontap: () {
                       Navigator.pushNamed(context, '/buttomNavigation');
                     },
@@ -46,9 +46,9 @@ class IntrestedScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   CustomButtom(
                     boxcolor: Colors.black,
-                    title: 'Next',
+                    title: 'Matrimony',
                     ontap: () {
-                      // Navigator.pushNamed(context, '/jobStatus');
+                   
                     },
                   ),
                 ],

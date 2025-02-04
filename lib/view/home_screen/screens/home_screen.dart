@@ -16,11 +16,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        
         title: Row(
           children: [
-           
-          Image.asset('assets/images/buddypairmenu.png'),
+            Image.asset('assets/images/buddypairmenu.png'),
             SizedBox(
               width: 5,
             ),
@@ -40,7 +38,12 @@ class HomeScreen extends StatelessWidget {
                     width: 1.0,
                   ),
                 ),
-                child: Image.asset('assets/images/bellbutton.png')),
+                child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.notifications_on_outlined,
+                      color: ColorConstants.primaryColor,
+                    ))),
             const SizedBox(
               width: 10,
             ),
