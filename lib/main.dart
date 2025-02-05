@@ -1,3 +1,4 @@
+import 'package:buddypair/view/details/screens/filterscreen.dart';
 import 'package:buddypair/view/matches/screens/matches_view_screen.dart';
 import 'package:buddypair/view/requests/screens/sent_screen.dart';
 import 'package:buddypair/view/splash/screens/splash_screen.dart';
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
         '/locationScreen':(context)=>LocationScreen(), 
         '/matchesViewScreen':(context)=>MatchProfile(),
         '/discoverScreen':(context)=>DiscoverScreen(),
-        '/sentScreen':(context)=>SentScreen()
+        '/sentScreen':(context)=>SentScreen(),
+        '/filterScreen':(context)=>FilterScreen()
       },
     );
   }
