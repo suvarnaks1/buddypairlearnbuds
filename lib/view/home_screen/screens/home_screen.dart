@@ -1,7 +1,7 @@
-import 'dart:ui';
+
 
 import 'package:buddypair/common/appbarfonts_constants.dart';
-import 'package:buddypair/common/circular_container.dart';
+
 import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 import '../../drawer.dart';
@@ -14,30 +14,22 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     
+ 
+      drawer: Rightsidemenu(),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Row(
           children: [
-            Builder(
-              builder: (context) => IconButton(
-                icon: Icon(Icons.menu, color: ColorConstants.primaryColor),
-                onPressed: () {
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Rightsidemenu()),
-                  );
-                }
-              ),
-            ),
-            // GestureDetector(
-            //     onTap: () {
-            //       Navigator.push(
-            //         context,
-            //         MaterialPageRoute(builder: (context) => Rightsidemenu()),
-            //       );
-            //     },
-            //     child: Image.asset('assets/images/buddypairmenu.png')),
+               Builder( 
+        builder: (context) => IconButton(
+          icon: Icon(Icons.menu, color: ColorConstants.primaryColor),
+          onPressed: () {
+            Scaffold.of(context).openDrawer(); 
+          },
+        ),
+      ),
             SizedBox(
               width: 5,
             ),
@@ -88,82 +80,4 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class CustomDrawer extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: Stack(
-        children: [
-          // Glass Effect
-          BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
-              color: Colors.deepPurple.withOpacity(0.6),
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              DrawerHeader(
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage:
-                          AssetImage('assets/images/profile pic 3.png'),
-                    ),
-                    const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Stone Stellar",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18)),
-                        Text("@Prime Member",
-                            style: TextStyle(color: Colors.white70)),
-                        Text("Online",
-                            style: TextStyle(color: Colors.greenAccent)),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Expanded(
-                child: ListView(
-                  children: [
-                    menuItem("My Profile"),
-                    menuItem("Sent Request"),
-                    menuItem("Viewed My Profile"),
-                    menuItem("Accept Request"),
-                    menuItem("Reject"),
-                    menuItem("Revived"),
-                    menuItem("Shortlisted By"),
-                    menuItem("Shortlisted"),
-                    menuItem("Contacted"),
-                    menuItem("Message"),
-                    menuItem("Settings"),
-                  ],
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.logout, color: Colors.white),
-                title: Text("Logout", style: TextStyle(color: Colors.white)),
-                onTap: () {},
-              )
-            ],
-          ),
-        ],
-      ),
-    );
-  }
 
-  Widget menuItem(String title) {
-    return ListTile(
-      title: Text(title, style: TextStyle(color: Colors.white)),
-      onTap: () {},
-    );
-  }
-}

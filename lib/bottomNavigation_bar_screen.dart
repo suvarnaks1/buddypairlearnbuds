@@ -1,11 +1,12 @@
 import 'package:buddypair/common/color_constants.dart';
-import 'package:buddypair/view/details/screens/filterscreen.dart';
+
 import 'package:buddypair/view/discover/screens/discover_screen.dart';
 import 'package:buddypair/view/matches/screens/matches_screen.dart';
-import 'package:buddypair/view/requests/screens/sent_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'view/groups/screens/create_group_screen.dart';
 import 'view/home_screen/screens/home_screen.dart';
+import 'view/profile/screens/edit_profile.dart';
 
 
 
@@ -23,7 +24,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     DiscoverScreen(),
     CreateGroupScreen(),
     MatchesScreen(),
-    FilterScreen()
+    EditProfile ()
 //SentScreen(),
   
   
