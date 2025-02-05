@@ -4,6 +4,7 @@ import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:buddypair/common/circular_container.dart';
 import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
+import '../../drawer.dart';
 import 'story_page.dart';
 import 'tab_bar_grid.dart';
 
@@ -18,7 +19,25 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         title: Row(
           children: [
-            Image.asset('assets/images/buddypairmenu.png'),
+            Builder(
+              builder: (context) => IconButton(
+                icon: Icon(Icons.menu, color: ColorConstants.primaryColor),
+                onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Rightsidemenu()),
+                  );
+                }
+              ),
+            ),
+            // GestureDetector(
+            //     onTap: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(builder: (context) => Rightsidemenu()),
+            //       );
+            //     },
+            //     child: Image.asset('assets/images/buddypairmenu.png')),
             SizedBox(
               width: 5,
             ),

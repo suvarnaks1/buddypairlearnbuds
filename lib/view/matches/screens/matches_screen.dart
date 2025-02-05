@@ -25,7 +25,7 @@ class MatchesScreen extends StatelessWidget {
                 color: ColorConstants.blackColor,
                 fontSize: 24),
             circularContainer(
-              imagePath: "assets/images/sort_logo.jpg",
+              imagePath: "assets/images/filter.png",
               onPressed: () {},
             ),
           ],

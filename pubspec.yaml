@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^6.2.1
   font_awesome_flutter: ^10.8.0
   percent_indicator: ^4.2.4
+  glass: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:
