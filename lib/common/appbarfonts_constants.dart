@@ -115,7 +115,7 @@ class PopinsFontsConstants extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(title,
         style: GoogleFonts.poppins(
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w400,
           fontSize: fontSize,
           height: 30 / 24,
           color: color,
