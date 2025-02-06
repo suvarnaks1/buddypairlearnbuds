@@ -17,7 +17,7 @@ class RecentMessages extends StatelessWidget {
         title: Row(
           children: [
             whitecCircularContainer(
-              imagePath: "assets/images/arrow.png",
+              imagePath: "assets/images/back.png",
               onPressed: () {},
             ),
             const SizedBox(
@@ -44,7 +44,7 @@ class RecentMessages extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           SizedBox(
-            height: 80,
+            height: 110,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 6,
@@ -52,7 +52,7 @@ class RecentMessages extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    height: 92,
+                    height: 100,
                     width: 80,
                     decoration: BoxDecoration(
                       color: Colors.white,

@@ -6,9 +6,8 @@ import 'package:buddypair/view/matches/screens/matches_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/groups/screens/create_group_screen.dart';
 import 'view/home_screen/screens/home_screen.dart';
-import 'view/profile/screens/edit_profile.dart';
 
-
+import 'view/recent_messages/screens/recent_messages.dart';
 
 class BottomNavBarExample extends StatefulWidget {
   @override
@@ -24,10 +23,7 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
     DiscoverScreen(),
     CreateGroupScreen(),
     MatchesScreen(),
-    EditProfile ()
-//SentScreen(),
-  
-  
+    RecentMessages()
   ];
 
   void _onItemTapped(int index) {
@@ -74,7 +70,10 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
             items: [
               BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Icon(Icons.home_outlined,color: ColorConstants.primaryColor,),
+                  icon: Icon(
+                    Icons.home_outlined,
+                    color: ColorConstants.primaryColor,
+                  ),
                   isSelected: _selectedIndex == 0,
                 ),
                 label: '',
@@ -93,16 +92,21 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
                 ),
                 label: '',
               ),
-              BottomNavigationBarItem( 
+              BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Icon(Icons.person_outline,color: ColorConstants.primaryColor),
+                  icon: Icon(Icons.person_outline,
+                      color: ColorConstants.primaryColor),
                   isSelected: _selectedIndex == 3,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Image.asset('assets/images/chat.png',color: ColorConstants.primaryColor,height: 24,),
+                  icon: Image.asset(
+                    'assets/images/chat.png',
+                    color: ColorConstants.primaryColor,
+                    height: 24,
+                  ),
                   isSelected: _selectedIndex == 4,
                 ),
                 label: '',
@@ -126,9 +130,3 @@ Widget _buildIconWithCircle({required Widget icon, required bool isSelected}) {
         )
       : icon;
 }
-
-
-
-
-
-

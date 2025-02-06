@@ -150,12 +150,14 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       fontSize: 16),
                                   IconButton(
                                       onPressed: () {},
-                                      icon: Image(
+                                      icon: 
+                                      Image(
                                         image: AssetImage(
                                           'assets/images/gallery.png',
                                         ),
                                         height: 30,
-                                      )),
+                                      )
+                                      ),
                                 ],
                               ),
                             ),
@@ -177,7 +179,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   AppbarfontsConstants(
-                                      title: 'Profile Pic ',
+                                      title: 'Add More  Images ',
                                       color: ColorConstants.fontGrayColor,
                                       fontSize: 16),
                                   IconButton(
@@ -186,6 +188,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                                         image: AssetImage(
                                           'assets/images/gallery.png',
                                         ),
+                                        color: ColorConstants.blackColor,
                                         height: 30,
                                       )),
                                 ],
@@ -217,7 +220,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       icon: Image(
                                         image: AssetImage(
                                           'assets/images/camvediopic.png',
-                                        ),
+                                        ),color: ColorConstants.blackColor,
                                         height: 30,
                                       )),
                                 ],
