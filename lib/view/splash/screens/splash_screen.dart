@@ -12,7 +12,7 @@ class SplashScreen  extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         // Smaller Rotating Radial Profile Model
-        const RotationWidget(),
+        //const RotationWidget(),
         const SizedBox(height: 10),
 
         // Text
