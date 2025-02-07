@@ -219,7 +219,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       onPressed: () {},
                                       icon: Image(
                                         image: AssetImage(
-                                          'assets/images/camvediopic.png',
+                                          'assets/images/video-camera.png',
                                         ),color: ColorConstants.blackColor,
                                         height: 30,
                                       )),

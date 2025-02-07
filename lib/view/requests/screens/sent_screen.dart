@@ -29,7 +29,7 @@ class SentScreen extends StatelessWidget {
                     color: ColorConstants.whiteColor,
                   )),
               SizedBox(
-                width: 55,
+                width: 100,
               ),
               AppbarfontsConstants(
                 title: 'Sent',

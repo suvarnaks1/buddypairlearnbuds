@@ -29,7 +29,7 @@ class ReceivedScreen extends StatelessWidget {
                     color: ColorConstants.whiteColor,
                   )),
               SizedBox(
-                width: 55,
+                width: 70,
               ),
               AppbarfontsConstants(
                 title: 'Recieved',
@@ -70,7 +70,6 @@ class ReceivedScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                
                   children: [
                     Container(
                       width: 60,
@@ -82,7 +81,9 @@ class ReceivedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -97,7 +98,8 @@ class ReceivedScreen extends StatelessWidget {
                       ],
                     ),
                     Spacer(),
-                    IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(
@@ -110,7 +112,6 @@ class ReceivedScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                 
                   children: [
                     Container(
                       width: 60,
@@ -122,7 +123,9 @@ class ReceivedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -135,8 +138,10 @@ class ReceivedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),Spacer(),
-                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(image: AssetImage('assets/images/x.png'))),
@@ -150,9 +155,8 @@ class ReceivedScreen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-        
+
                 Row(
-            
                   children: [
                     Container(
                       width: 60,
@@ -164,7 +168,9 @@ class ReceivedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -177,60 +183,61 @@ class ReceivedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),Spacer(),
-                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
-        
+
                 SizedBox(
                   height: 10,
                 ),
-        
-                Row(
-                   
+
+                Row(children: [
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        image: DecorationImage(
+                            image:
+                                AssetImage('assets/images/profile pic 3.png'),
+                            fit: BoxFit.fill)),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      SizedBox(width: 10,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'Bristy Haque',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Be your own hero 💪',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      Spacer(),
-                       IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
-                      IconButton(
-                          onPressed: () {},
-                          icon:
-                              Image(image: AssetImage('assets/images/x.png'))),
-                    ]),
+                      AppbarfontsConstants(
+                          title: 'Bristy Haque',
+                          color: ColorConstants.blackColor,
+                          fontSize: 18),
+                      AppbarfontsConstants(
+                          title: 'Be your own hero 💪',
+                          color: ColorConstants.fontGrayColor,
+                          fontSize: 12),
+                    ],
+                  ),
+                  Spacer(),
+                  IconButton(
+                      onPressed: () {}, icon: Icon(Icons.favorite_border)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Image(image: AssetImage('assets/images/x.png'))),
+                ]),
                 SizedBox(
                   height: 10,
                 ),
-        //.........................................
+                //.........................................
                 AppbarfontsConstants(
                     title: 'S', color: ColorConstants.blackColor, fontSize: 16),
                 Row(
-                  
                   children: [
                     Container(
                       width: 60,
@@ -242,7 +249,9 @@ class ReceivedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -257,19 +266,19 @@ class ReceivedScreen extends StatelessWidget {
                       ],
                     ),
                     Spacer(),
-                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
-        
+
                 SizedBox(
                   height: 10,
                 ),
-        
+
                 Row(
-            
                   children: [
                     Container(
                       width: 60,
@@ -280,7 +289,10 @@ class ReceivedScreen extends StatelessWidget {
                               image:
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
-                    ),SizedBox(width: 10,),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -293,8 +305,10 @@ class ReceivedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),Spacer(),
-                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(image: AssetImage('assets/images/x.png')))

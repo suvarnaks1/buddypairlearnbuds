@@ -29,7 +29,7 @@ class SettingsScreens extends StatelessWidget {
                       color: ColorConstants.whiteColor,
                     )),
                 SizedBox(
-                  width: 55,
+                  width: 75,
                 ),
                 AppbarfontsConstants(
                   title: 'Settings',

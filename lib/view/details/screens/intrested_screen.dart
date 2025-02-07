@@ -12,7 +12,7 @@ class IntrestedScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
-            height: 300,
+            height: 210,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
@@ -28,7 +28,7 @@ class IntrestedScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   Center(
                     child: Text(
                       'Intrested',
@@ -47,9 +47,7 @@ class IntrestedScreen extends StatelessWidget {
                   CustomButtom(
                     boxcolor: Colors.black,
                     title: 'Matrimony',
-                    ontap: () {
-                   
-                    },
+                    ontap: () {},
                   ),
                 ],
               ),
