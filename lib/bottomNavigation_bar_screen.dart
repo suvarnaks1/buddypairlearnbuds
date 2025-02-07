@@ -80,7 +80,8 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
               ),
               BottomNavigationBarItem(
                 icon: _buildIconWithCircle(
-                  icon: Image.asset('assets/images/Discover.png'),
+                  icon: Image.asset('assets/images/compass.png',     color: ColorConstants.primaryColor,
+                    height: 24,),
                   isSelected: _selectedIndex == 1,
                 ),
                 label: '',

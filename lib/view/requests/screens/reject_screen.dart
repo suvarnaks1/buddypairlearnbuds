@@ -29,7 +29,7 @@ class RejectScreen extends StatelessWidget {
                     color: ColorConstants.whiteColor,
                   )),
               SizedBox(
-                width: 55,
+                width: 90,
               ),
               AppbarfontsConstants(
                 title: 'Reject',

@@ -28,8 +28,8 @@ class AcceptedScreen extends StatelessWidget {
                     'assets/images/search.png',
                     color: ColorConstants.whiteColor,
                   )),
-              SizedBox(
-                width: 55,
+               SizedBox(
+                width: 90,
               ),
               AppbarfontsConstants(
                 title: 'Accept',

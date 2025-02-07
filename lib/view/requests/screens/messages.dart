@@ -29,7 +29,7 @@ class Messages extends StatelessWidget {
                     color: ColorConstants.whiteColor,
                   )),
               SizedBox(
-                width: 55,
+                width: 70,
               ),
               AppbarfontsConstants(
                 title: 'Messages',

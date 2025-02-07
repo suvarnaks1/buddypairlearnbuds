@@ -17,7 +17,7 @@ class MatchesScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             circularContainer(
-              imagePath: "assets/images/arrow.png",
+              imagePath: "assets/images/back.png",
               onPressed: () {},
             ),
             AppbarfontsConstants(

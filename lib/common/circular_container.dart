@@ -14,7 +14,7 @@ Widget circularContainer({
     ),
     child: IconButton(
       onPressed: onPressed,
-      icon: Image.asset(imagePath), // Display the provided image
+      icon: Image.asset(imagePath,color: ColorConstants.primaryColor,height: 24,width: 24,), // Display the provided image
     ),
   );
 }

@@ -116,7 +116,11 @@ class DiscoverScreen extends StatelessWidget {
                     backgroundColor: Colors.white,
                     radius: 19,
                     child: Center(
-                        child: Image.asset('assets/images/filter.png')),
+                        child: Image.asset(
+                      'assets/images/filter.png',
+                      height: 24,
+                      color: ColorConstants.primaryColor,
+                    )),
                   ),
                 ),
               ],
