@@ -36,7 +36,7 @@ class _RightsidemenuState extends State<Rightsidemenu> {
     'Viewed My Profile',
     'Accept Request',
     'Reject',
-    'Reviewed',
+    'Recieved',
     'Shortlisted By',
     'Shortlisted',
     'Contacted',

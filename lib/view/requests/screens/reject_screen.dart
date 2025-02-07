@@ -43,7 +43,7 @@ class RejectScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          // height: 5000,
+          height: 1000,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -65,12 +65,13 @@ class RejectScreen extends StatelessWidget {
                       ))),
                 ),
                 AppbarfontsConstants(
-                    title: 'A', color: ColorConstants.blackColor, fontSize: 16),
+                    title: 'A',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
                 SizedBox(
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 60,
@@ -78,9 +79,12 @@ class RejectScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/profile pic 3.png'),
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,19 +99,12 @@ class RejectScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Image(
-                            image: AssetImage(
-                          'assets/images/X.png',
-                        ))),
                   ],
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 60,
@@ -115,9 +112,12 @@ class RejectScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/profile pic 3.png'),
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,22 +132,20 @@ class RejectScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
                   ],
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 AppbarfontsConstants(
-                    title: 'B', color: ColorConstants.blackColor, fontSize: 16),
+                    title: 'B',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
                 SizedBox(
                   height: 10,
                 ),
-
+        
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 60,
@@ -155,9 +153,12 @@ class RejectScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/profile pic 3.png'),
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,55 +173,50 @@ class RejectScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
                   ],
                 ),
-
+        
                 SizedBox(
                   height: 10,
                 ),
-
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        
+                Row(children: [
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        image: DecorationImage(
+                            image:
+                                AssetImage('assets/images/profile pic 3.png'),
+                            fit: BoxFit.fill)),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'Bristy Haque',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Be your own hero 💪',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon:
-                              Image(image: AssetImage('assets/images/X.png'))),
-                    ]),
+                      AppbarfontsConstants(
+                          title: 'Bristy Haque',
+                          color: ColorConstants.blackColor,
+                          fontSize: 18),
+                      AppbarfontsConstants(
+                          title: 'Be your own hero 💪',
+                          color: ColorConstants.fontGrayColor,
+                          fontSize: 12),
+                    ],
+                  ),
+                ]),
                 SizedBox(
                   height: 10,
                 ),
-//.........................................
+                //.........................................
                 AppbarfontsConstants(
-                    title: 'S', color: ColorConstants.blackColor, fontSize: 16),
+                    title: 'S',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 60,
@@ -228,9 +224,12 @@ class RejectScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/profile pic 3.png'),
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,18 +244,14 @@ class RejectScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
                   ],
                 ),
-
+        
                 SizedBox(
                   height: 10,
                 ),
-
+        
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 60,
@@ -264,9 +259,12 @@ class RejectScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/profile pic 3.png'),
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -281,9 +279,6 @@ class RejectScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png')))
                   ],
                 ),
               ],

@@ -41,117 +41,154 @@ class SentScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Expanded(
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
-              ),
+        child: Container(
+          width: double.infinity,
+          height: 1000,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40),
+              topRight: Radius.circular(40),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                    child: IconButton(
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Image(
+                          image: AssetImage(
+                        "assets/images/Rectangle 1131.png",
+                      ))),
+                ),
+                AppbarfontsConstants(
+                    title: 'A',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
+                              fit: BoxFit.fill)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppbarfontsConstants(
+                            title: 'Afrin Sabila',
+                            color: ColorConstants.blackColor,
+                            fontSize: 18),
+                        AppbarfontsConstants(
+                            title: 'Life is beautiful 👌',
+                            color: ColorConstants.fontGrayColor,
+                            fontSize: 12),
+                      ],
+                    ),
+                    IconButton(
                         onPressed: () {},
                         icon: Image(
                             image: AssetImage(
-                          "assets/images/Rectangle 1131.png",
+                          'assets/images/x.png',
                         ))),
-                  ),
-                  AppbarfontsConstants(
-                      title: 'A',
-                      color: ColorConstants.blackColor,
-                      fontSize: 16),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'Afrin Sabila',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Life is beautiful 👌',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Image(
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
                               image: AssetImage(
-                            'assets/images/X.png',
-                          ))),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'Adil Adnan',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Be your own hero 💪',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon:
-                              Image(image: AssetImage('assets/images/X.png'))),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  AppbarfontsConstants(
-                      title: 'B',
-                      color: ColorConstants.blackColor,
-                      fontSize: 16),
-                  SizedBox(
-                    height: 10,
-                  ),
-
-                  Row(
+                                  'assets/images/profile pic 3.png'),
+                              fit: BoxFit.fill)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppbarfontsConstants(
+                            title: 'Adil Adnan',
+                            color: ColorConstants.blackColor,
+                            fontSize: 18),
+                        AppbarfontsConstants(
+                            title: 'Be your own hero 💪',
+                            color: ColorConstants.fontGrayColor,
+                            fontSize: 12),
+                      ],
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon:
+                            Image(image: AssetImage('assets/images/x.png'))),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                AppbarfontsConstants(
+                    title: 'B',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
+                SizedBox(
+                  height: 10,
+                ),
+        
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
+                              fit: BoxFit.fill)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppbarfontsConstants(
+                            title: 'Bristy Haque',
+                            color: ColorConstants.blackColor,
+                            fontSize: 18),
+                        AppbarfontsConstants(
+                            title: 'Be your own hero 💪',
+                            color: ColorConstants.fontGrayColor,
+                            fontSize: 12),
+                      ],
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon:
+                            Image(image: AssetImage('assets/images/x.png'))),
+                  ],
+                ),
+        
+                SizedBox(
+                  height: 10,
+                ),
+        
+                Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
@@ -179,124 +216,86 @@ class SentScreen extends StatelessWidget {
                       ),
                       IconButton(
                           onPressed: () {},
-                          icon:
-                              Image(image: AssetImage('assets/images/X.png'))),
-                    ],
-                  ),
-
-                  SizedBox(
-                    height: 10,
-                  ),
-
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          icon: Image(
+                              image: AssetImage('assets/images/x.png'))),
+                    ]),
+                SizedBox(
+                  height: 10,
+                ),
+                //.........................................
+                AppbarfontsConstants(
+                    title: 'S',
+                    color: ColorConstants.blackColor,
+                    fontSize: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
+                              fit: BoxFit.fill)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/profile pic 3.png'),
-                                  fit: BoxFit.fill)),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AppbarfontsConstants(
-                                title: 'Bristy Haque',
-                                color: ColorConstants.blackColor,
-                                fontSize: 18),
-                            AppbarfontsConstants(
-                                title: 'Be your own hero 💪',
-                                color: ColorConstants.fontGrayColor,
-                                fontSize: 12),
-                          ],
-                        ),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Image(
-                                image: AssetImage('assets/images/X.png'))),
-                      ]),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  //.........................................
-                  AppbarfontsConstants(
-                      title: 'S',
-                      color: ColorConstants.blackColor,
-                      fontSize: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'sheik Sadi ',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Be your own hero 💪',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon:
-                              Image(image: AssetImage('assets/images/X.png'))),
-                    ],
-                  ),
-
-                  SizedBox(
-                    height: 10,
-                  ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/profile pic 3.png'),
-                                fit: BoxFit.fill)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          AppbarfontsConstants(
-                              title: 'sheik Sadi ',
-                              color: ColorConstants.blackColor,
-                              fontSize: 18),
-                          AppbarfontsConstants(
-                              title: 'Be your own hero 💪',
-                              color: ColorConstants.fontGrayColor,
-                              fontSize: 12),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Image(image: AssetImage('assets/images/X.png')))
-                    ],
-                  ),
-                ],
-              ),
+                        AppbarfontsConstants(
+                            title: 'sheik Sadi ',
+                            color: ColorConstants.blackColor,
+                            fontSize: 18),
+                        AppbarfontsConstants(
+                            title: 'Be your own hero 💪',
+                            color: ColorConstants.fontGrayColor,
+                            fontSize: 12),
+                      ],
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon:
+                            Image(image: AssetImage('assets/images/x.png'))),
+                  ],
+                ),
+        
+                SizedBox(
+                  height: 10,
+                ),
+        
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/profile pic 3.png'),
+                              fit: BoxFit.fill)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppbarfontsConstants(
+                            title: 'sheik Sadi ',
+                            color: ColorConstants.blackColor,
+                            fontSize: 18),
+                        AppbarfontsConstants(
+                            title: 'Be your own hero 💪',
+                            color: ColorConstants.fontGrayColor,
+                            fontSize: 12),
+                      ],
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(image: AssetImage('assets/images/x.png')))
+                  ],
+                ),
+              ],
             ),
           ),
         ),

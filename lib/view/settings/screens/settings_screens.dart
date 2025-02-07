@@ -98,17 +98,14 @@ class SettingsScreens extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 44,
-                          width: 44,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xFFF2F8F7),
-                          ),
-                          child: Image.asset(
-                            'assets/images/key.png',
-                            color: Color(0xFF797C7B),
-                          ),
-                        ),
+                            height: 44,
+                            width: 44,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFFF2F8F7),
+                            ),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.key,color: Color(0xFF797C7B),))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -138,17 +135,14 @@ class SettingsScreens extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 44,
-                          width: 44,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xFFF2F8F7),
-                          ),
-                          child: Image.asset(
-                            'assets/images/chat.png',
-                            color: Color(0xFF797C7B),
-                          ),
-                        ),
+                            height: 44,
+                            width: 44,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFFF2F8F7),
+                            ),
+                            child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.chat,color: Color(0xFF797C7B),))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -184,11 +178,9 @@ class SettingsScreens extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: Color(0xFFF2F8F7),
                           ),
-                          child: Image.asset(
-                            'assets/images/belll.png',
-                            color: Color(0xFF797C7B),
-                          ),
-                        ),
+                          child: IconButton(
+                                onPressed: () {}, icon: Icon(Icons.notifications_active,color: Color(0xFF797C7B),))),
+                        
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -218,17 +210,18 @@ class SettingsScreens extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 44,
-                          width: 44,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xFFF2F8F7),
-                          ),
-                          child: Image.asset(
-                            'assets/images/help.png',
-                            color: Color(0xFF797C7B),
-                          ),
-                        ),
+                            height: 44,
+                            width: 44,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFFF2F8F7),
+                            ),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.help,
+                                  color: Color(0xFF797C7B),
+                                ))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -264,19 +257,21 @@ class SettingsScreens extends StatelessWidget {
                               shape: BoxShape.circle,
                               color: Color(0xFFF2F8F7),
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/images/upperarrow.png',
-                                  color: Color(0xFF797C7B),
-                                ),
-                                Image.asset(
-                                  'assets/images/downarrow.png',
-                                  color: Color(0xFF797C7B),
-                                )
-                              ],
-                            )),
+                            child: IconButton(onPressed: (){}, icon: Icon(Icons.storage,  color: Color(0xFF797C7B),)),
+                            // child: Row(
+                            //   mainAxisAlignment: MainAxisAlignment.center,
+                            //   children: [
+                            //     Image.asset(
+                            //       'assets/images/upperarrow.png',
+                            //       color: Color(0xFF797C7B),
+                            //     ),
+                            //     Image.asset(
+                            //       'assets/images/downarrow.png',
+                            //       color: Color(0xFF797C7B),
+                            //     )
+                            //   ],
+                            // )
+                            ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -312,7 +307,8 @@ class SettingsScreens extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: Color(0xFFF2F8F7),
                           ),
-                          child: Image.asset(
+                          child: 
+                          Image.asset(
                             'assets/images/Users.png',
                             color: Color(0xFF797C7B),
                           ),

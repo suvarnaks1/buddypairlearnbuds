@@ -68,58 +68,57 @@ class RecentMessages extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: ColorConstants.whiteColor,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(32),
-                  topRight: Radius.circular(32),
-                ),
+          Container(
+            height: double.infinity,
+            decoration: BoxDecoration(
+              color: ColorConstants.whiteColor,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(32),
+                topRight: Radius.circular(32),
               ),
-              child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: 6,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Expanded(
-                        child: Container(
-                          height: 100,
-                          width: double.infinity,
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  CircleAvatar(
-                                    radius: 40,
-                                    backgroundImage: AssetImage(
-                                        'assets/images/Avatar.png'),
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Alfredo Calzoni'),
-                                      Text(
-                                        'It will have two lines of heading ...',
-                                        style: TextStyle(color: Colors.black),
-                                      ),
-                                    ],
-                                  ),
-                                  Text('9:30')
-                                ],
-                              ),
-                              Divider()
-                            ],
-                          ),
+            ),
+            child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Expanded(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              children: [
+                                CircleAvatar(
+                                  radius: 40,
+                                  backgroundImage: AssetImage(
+                                      'assets/images/Avatar.png'),
+                                ),
+                                Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Alfredo Calzoni'),
+                                    Text(
+                                      'It will have two lines of heading ...',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                                Text('9:30')
+                              ],
+                            ),
+                            Divider()
+                          ],
                         ),
                       ),
-                    );
-                  }),
-            ),
+                    ),
+                  );
+                }),
           )
         ],
       ),

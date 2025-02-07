@@ -43,7 +43,7 @@ class ContactedScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          // height: 5000,
+          height: 5000,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -70,7 +70,7 @@ class ContactedScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                
                   children: [
                     Container(
                       width: 60,
@@ -82,6 +82,7 @@ class ContactedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -95,11 +96,13 @@ class ContactedScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
+                    Spacer(),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
                         icon: Image(
                             image: AssetImage(
-                          'assets/images/X.png',
+                          'assets/images/x.png',
                         ))),
                   ],
                 ),
@@ -107,7 +110,7 @@ class ContactedScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 
                   children: [
                     Container(
                       width: 60,
@@ -119,6 +122,7 @@ class ContactedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -131,10 +135,11 @@ class ContactedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
                 SizedBox(
@@ -145,9 +150,9 @@ class ContactedScreen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-
+        
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            
                   children: [
                     Container(
                       width: 60,
@@ -159,6 +164,7 @@ class ContactedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -171,19 +177,20 @@ class ContactedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
-
+        
                 SizedBox(
                   height: 10,
                 ),
-
+        
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   
                     children: [
                       Container(
                         width: 60,
@@ -195,6 +202,7 @@ class ContactedScreen extends StatelessWidget {
                                     'assets/images/profile pic 3.png'),
                                 fit: BoxFit.fill)),
                       ),
+                      SizedBox(width: 10,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -208,19 +216,21 @@ class ContactedScreen extends StatelessWidget {
                               fontSize: 12),
                         ],
                       ),
+                      Spacer(),
+                       IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                       IconButton(
                           onPressed: () {},
                           icon:
-                              Image(image: AssetImage('assets/images/X.png'))),
+                              Image(image: AssetImage('assets/images/x.png'))),
                     ]),
                 SizedBox(
                   height: 10,
                 ),
-//.........................................
+        //.........................................
                 AppbarfontsConstants(
                     title: 'S', color: ColorConstants.blackColor, fontSize: 16),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  
                   children: [
                     Container(
                       width: 60,
@@ -232,6 +242,7 @@ class ContactedScreen extends StatelessWidget {
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -245,18 +256,20 @@ class ContactedScreen extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
+                    Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png'))),
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
-
+        
                 SizedBox(
                   height: 10,
                 ),
-
+        
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            
                   children: [
                     Container(
                       width: 60,
@@ -267,7 +280,7 @@ class ContactedScreen extends StatelessWidget {
                               image:
                                   AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
-                    ),
+                    ),SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -280,10 +293,11 @@ class ContactedScreen extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
                     IconButton(
                         onPressed: () {},
-                        icon: Image(image: AssetImage('assets/images/X.png')))
+                        icon: Image(image: AssetImage('assets/images/x.png')))
                   ],
                 ),
               ],
