@@ -16,7 +16,7 @@ class ViewedMyProfile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             circularContainer(
-              imagePath: "assets/images/arrow.png",
+              imagePath: "assets/images/back.png",
               onPressed: () {},
             ),
             AppbarfontsConstants(
@@ -24,7 +24,7 @@ class ViewedMyProfile extends StatelessWidget {
                 color: ColorConstants.blackColor,
                 fontSize: 24),
             circularContainer(
-              imagePath: "assets/images/sort_logo.jpg",
+              imagePath: "assets/images/filter.png",
               onPressed: () {},
             ),
           ],
