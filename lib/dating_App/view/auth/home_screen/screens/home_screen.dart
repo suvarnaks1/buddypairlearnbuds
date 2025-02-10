@@ -1,8 +1,8 @@
 import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:buddypair/common/color_constants.dart';
-import 'package:buddypair/view/dating_app/drawer/left_side_drawer.dart';
-import 'package:buddypair/view/dating_app/drawer/right_side_drawer.dart';
-import 'package:buddypair/view/dating_app/notification/screens/notification_page.dart';
+import 'package:buddypair/dating_App/view/drawer/left_side_drawer.dart';
+import 'package:buddypair/dating_App/view/drawer/right_side_drawer.dart';
+import 'package:buddypair/dating_App/view/notification/screens/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'story_page.dart';
 import 'tab_bar_grid.dart';

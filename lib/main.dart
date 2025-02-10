@@ -1,20 +1,20 @@
-import 'package:buddypair/view/dating_app/details/screens/filterscreen.dart';
-import 'package:buddypair/view/dating_app/matches/screens/matches_view_screen.dart';
-import 'package:buddypair/view/dating_app/requests/screens/sent_screen.dart';
-import 'package:buddypair/view/splash/screens/splash_screen.dart';
-import 'package:buddypair/view/dating_app/discover/screens/discover_screen.dart';
-import 'package:buddypair/view/dating_app/auth/home_screen/screens/home_screen.dart';
-import 'package:buddypair/view/dating_app/details/screens/intrested_screen.dart';
-import 'package:buddypair/view/dating_app/details/screens/job_details.dart';
-import 'package:buddypair/view/dating_app/details/screens/job_status.dart';
-import 'package:buddypair/view/dating_app/location_screen.dart';
-import 'package:buddypair/view/dating_app/auth/screens/login_page.dart';
-import 'package:buddypair/view/dating_app/details/screens/personal_details.dart';
-import 'package:buddypair/view/dating_app/details/screens/relationship_goals_screen.dart';
-import 'package:buddypair/view/dating_app/details/screens/seeker_job_details.dart';
+import 'package:buddypair/dating_App/view/details/screens/filterscreen.dart';
+import 'package:buddypair/dating_App/view/matches/screens/matches_view_screen.dart';
+import 'package:buddypair/dating_App/view/requests/screens/sent_screen.dart';
+import 'package:buddypair/dating_App/splash/screens/splash_screen.dart';
+import 'package:buddypair/dating_App/view/discover/screens/discover_screen.dart';
+import 'package:buddypair/dating_App/view/auth/home_screen/screens/home_screen.dart';
+import 'package:buddypair/dating_App/view/details/screens/intrested_screen.dart';
+import 'package:buddypair/dating_App/view/details/screens/job_details.dart';
+import 'package:buddypair/dating_App/view/details/screens/job_status.dart';
+import 'package:buddypair/dating_App/view/location_screen.dart';
+import 'package:buddypair/dating_App/view/auth/screens/login_page.dart';
+import 'package:buddypair/dating_App/view/details/screens/personal_details.dart';
+import 'package:buddypair/dating_App/view/details/screens/relationship_goals_screen.dart';
+import 'package:buddypair/dating_App/view/details/screens/seeker_job_details.dart';
 import 'package:flutter/material.dart';
-import 'view/dating_app/bottomNavigation_bar_screen.dart';
-import 'view/dating_app/auth/screens/sign_up_page.dart';
+import 'dating_App/view/bottomNavigation_bar_screen.dart';
+import 'dating_App/view/auth/screens/sign_up_page.dart';
 
 void main() {
   runApp(MyApp());

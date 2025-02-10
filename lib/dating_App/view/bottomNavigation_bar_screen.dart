@@ -1,7 +1,7 @@
 import 'package:buddypair/common/color_constants.dart';
 
-import 'package:buddypair/view/dating_app/discover/screens/discover_screen.dart';
-import 'package:buddypair/view/dating_app/matches/screens/matches_screen.dart';
+import 'package:buddypair/dating_App/view/discover/screens/discover_screen.dart';
+import 'package:buddypair/dating_App/view/matches/screens/matches_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'groups/screens/create_group_screen.dart';
