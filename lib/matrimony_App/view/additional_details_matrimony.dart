@@ -258,19 +258,24 @@ class MatrimonyAdditionaldetails extends StatelessWidget {
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 300,
-                        height: 60,
-                        decoration: BoxDecoration(
-                          color: Color(0Xff22172A),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Next',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
+                      child: GestureDetector(
+                        onTap: () {
+                           Navigator.pushNamed(context, '/matrimonyBottomNav');
+                        },
+                        child: Container(
+                          width: 300,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            color: Color(0Xff22172A),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Next',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ),
