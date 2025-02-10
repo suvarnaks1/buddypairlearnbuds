@@ -1,5 +1,8 @@
 
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 
@@ -100,17 +103,13 @@ class _MatchProfileState extends State<MatchProfile> {
                     ),
                   ),
                   Spacer(),
-                  Text(
-                    'Alfredo Calzoni,20',
-                    style: TextStyles().heading1(color: Colors.white),
-                  ),
+                  AppbarfontsConstants(title: 'Alfredo Calzoni,20', color: ColorConstants.blackColor, fontSize: 32),
+                 
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    'HAMBURG, GERMANY',
-                    style: TextStyles().smallText(color: Colors.white),
-                  ),
+                   AppbarfontsConstants(title: 'HAMBURG, GERMANY', color: ColorConstants.whiteColor, fontSize: 14),
+                 
                   SizedBox(
                     height: 10,
                   ),
@@ -129,23 +128,17 @@ class _MatchProfileState extends State<MatchProfile> {
                               radius: 22.0,
                               lineWidth: 4.0,
                               percent: 1.0,
-                              center: Text(
-                                "80%",
-                                style:
-                                    TextStyles().smallText(color: Colors.white),
-                              ),
+                  
+                              center:AppbarfontsConstants(title: '80%', color: ColorConstants.whiteColor, fontSize: 12),
+                            
                               progressColor: Color(0XFFDD88CF),
                             ),
                           ),
                           SizedBox(
                             width: 8,
                           ),
-                          Text(
-                            'Match',
-                            style: TextStyles().subheading(
-                              color: Colors.white,
-                            ),
-                          ),
+                          AppbarfontsConstants(title: 'Match', color: ColorConstants.whiteColor, fontSize: 20),
+                        
                           SizedBox(
                             width: 10,
                           ),
@@ -183,20 +176,14 @@ class _MatchProfileState extends State<MatchProfile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
-            Text(
-              "About",
-              style: TextStyles().bodyText(color: Colors.black45),
-            ),
+            AppbarfontsConstants(title: 'About', color: ColorConstants.blackColor, fontSize: 16),
+         
             const SizedBox(height: 10),
-            Text(
-              "A good listener. I love having a good talk to know each other's side.",
-              style: TextStyles().bodyText(),
-            ),
+            AppbarfontsConstants(title: "A good listener. I love having a good talk to know each other's side.", color: ColorConstants.blackColor, fontSize: 16),
+            
             const SizedBox(height: 30),
-            Text(
-              "Interest",
-              style: TextStyles().bodyText(color: Colors.black45),
-            ),
+            AppbarfontsConstants(title: 'Interest', color: ColorConstants.blackColor, fontSize: 16),
+           
             Expanded(
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -220,7 +207,7 @@ class _MatchProfileState extends State<MatchProfile> {
                                     width: 20, height: 50),
                                 Text(
                                   items[index]["text"]!,
-                                  style: TextStyles().bodyText(),
+                                  style: GoogleFonts.aldrich(color: ColorConstants.primaryColor,fontSize: 16)
                                 ),
                               ],
                             ),
@@ -330,9 +317,10 @@ Widget BackIcon() {
               SizedBox(
                 width: 8,
               ),
+              
               Text(
                 '25.5km',
-                style: TextStyles().bodyText(color: Colors.white),
+             style: GoogleFonts.aldrich(color: ColorConstants.whiteColor,fontSize: 16)
               ),
             ],
           ),
