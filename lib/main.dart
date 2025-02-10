@@ -3,7 +3,7 @@ import 'package:buddypair/dating_App/view/matches/screens/matches_view_screen.da
 import 'package:buddypair/dating_App/view/requests/screens/sent_screen.dart';
 import 'package:buddypair/dating_App/splash/screens/splash_screen.dart';
 import 'package:buddypair/dating_App/view/discover/screens/discover_screen.dart';
-import 'package:buddypair/dating_App/view/auth/home_screen/screens/home_screen.dart';
+import 'package:buddypair/dating_App/view/home_screen/screens/home_screen.dart';
 import 'package:buddypair/dating_App/view/details/screens/intrested_screen.dart';
 import 'package:buddypair/dating_App/view/details/screens/job_details.dart';
 import 'package:buddypair/dating_App/view/details/screens/job_status.dart';

@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/appbarfonts_constants.dart';
 
-class SettingsScreens extends StatelessWidget {
-  const SettingsScreens({super.key});
+class SettingsScreens extends StatefulWidget {
+  SettingsScreens({super.key});
+
+  @override
+  State<SettingsScreens> createState() => _SettingsScreensState();
+}
+
+class _SettingsScreensState extends State<SettingsScreens> {
+bool isTwoFAEnabled = true;
 
   @override
   Widget build(BuildContext context) {
@@ -258,19 +265,7 @@ class SettingsScreens extends StatelessWidget {
                               color: Color(0xFFF2F8F7),
                             ),
                             child: IconButton(onPressed: (){}, icon: Icon(Icons.storage,  color: Color(0xFF797C7B),)),
-                            // child: Row(
-                            //   mainAxisAlignment: MainAxisAlignment.center,
-                            //   children: [
-                            //     Image.asset(
-                            //       'assets/images/upperarrow.png',
-                            //       color: Color(0xFF797C7B),
-                            //     ),
-                            //     Image.asset(
-                            //       'assets/images/downarrow.png',
-                            //       color: Color(0xFF797C7B),
-                            //     )
-                            //   ],
-                            // )
+                          
                             ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -325,6 +320,50 @@ class SettingsScreens extends StatelessWidget {
                                 fontSize: 16),
                           ],
                         )
+                      ],
+                    ),
+                  ),
+                    SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 55,
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 44,
+                          width: 44,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFFF2F8F7),
+                          ),
+                          child: 
+                          Image.asset(
+                            'assets/images/Users.png',
+                            color: Color(0xFF797C7B),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        BoldFontsConstants(
+                            title: 'Are You Interested to Show \n Your Profile On Similar Job',
+                            color: ColorConstants.blackColor,
+                            fontSize: 16),
+                            Spacer(),
+                                     Switch(
+                                    value: isTwoFAEnabled,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        isTwoFAEnabled = value;
+                                      });
+                                    },
+                                    activeColor: ColorConstants.whiteColor,
+                                    inactiveThumbColor: ColorConstants.whiteColor,
+                                    inactiveTrackColor: ColorConstants.primaryColor,
+                                    activeTrackColor: ColorConstants.primaryColor,
+                                  )
                       ],
                     ),
                   ),
