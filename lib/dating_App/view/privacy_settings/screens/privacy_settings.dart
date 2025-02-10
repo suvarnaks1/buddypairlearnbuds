@@ -21,24 +21,23 @@ class _PrivacySettingsScreenState extends State<PrivacySettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConstants.primaryColor,
-      appBar: AppBar(
+      appBar: AppBar(automaticallyImplyLeading: false,
         toolbarHeight: 100,
         backgroundColor: ColorConstants.primaryColor,
         title: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-              Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: ColorConstants.pinkColor,
-                    shape: BoxShape.circle,
-
-                  ),
-                  child: Image.asset(
-                    'assets/images/Search.png',
-                    color: ColorConstants.whiteColor,
-                  )),
+            Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: ColorConstants.pinkColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(
+                      'assets/images/search.png',
+                      color: ColorConstants.whiteColor,
+                    )),
               SizedBox(
                 width: 30,
               ),

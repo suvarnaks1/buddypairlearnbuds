@@ -1,4 +1,5 @@
 import 'package:buddypair/common/color_constants.dart';
+import 'package:buddypair/dating_App/spin_page.dart';
 import 'package:buddypair/dating_App/view/discover/screens/discover_screen.dart';
 import 'package:buddypair/dating_App/view/matches/screens/matches_screen.dart';
 
@@ -6,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'groups/screens/create_group_screen.dart';
 import 'home_screen/screens/home_screen.dart';
 
-import 'privacy_settings/screens/privacy_settings.dart';
+
 import 'recent_messages/screens/recent_messages.dart';
 
 
@@ -25,8 +26,8 @@ class _BottomNavBarExampleState extends State<BottomNavBarExample> {
   final List<Widget> _pages = [
     HomeScreen(),
     DiscoverScreen(),
-    PrivacySettingsScreen(),
-   // CreateGroupScreen(),
+    
+   SpinPage(),
     MatchesScreen(),
    RecentMessages()
   ];
