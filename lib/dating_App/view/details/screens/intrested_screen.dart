@@ -1,3 +1,5 @@
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../auth/screens/sign_up_page.dart';
@@ -30,10 +32,7 @@ class IntrestedScreen extends StatelessWidget {
                 children: [
                   SizedBox(height: 10),
                   Center(
-                    child: Text(
-                      'Intrested',
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
+                    child:  AppbarfontsConstants(title: 'Intrested', color: ColorConstants.blackColor, fontSize: 20),
                   ),
                   SizedBox(height: 20),
                   CustomButtom(

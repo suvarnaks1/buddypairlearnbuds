@@ -30,7 +30,7 @@ class SplashScreen  extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                     Navigator.pushNamed(context, '/signup'); 
+                     Navigator.pushNamed(context, '/loginup'); 
                   },
                   child: Container(
                     width: 300,
@@ -114,7 +114,9 @@ class SplashScreen  extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                   Navigator.pushNamed(context, '/signup'); 
+                      },
                       child: Text(
                         " Sign Up",
                         textAlign: TextAlign.center,

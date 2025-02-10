@@ -1,6 +1,8 @@
+import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../../../common/color_constants.dart';
 import '../../auth/screens/sign_up_page.dart';
 
 class JobStatusScreen extends StatefulWidget {
@@ -35,10 +37,7 @@ class _JobStatusScreenState extends State<JobStatusScreen> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "Job Status",
-                  style: TextStyle(fontSize: 20, color: Colors.black),
-                ),
+              AppbarfontsConstants(title: 'Job Status', color: ColorConstants.blackColor, fontSize: 20),
                 const SizedBox(height: 20),
                 CheckboxListTile(
                   title: Text("Employer"),

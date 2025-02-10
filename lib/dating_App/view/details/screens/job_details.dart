@@ -1,3 +1,5 @@
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../auth/screens/sign_up_page.dart';
@@ -29,10 +31,7 @@ class JobDetailsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Text(
-                    'Job Details',
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
+                 AppbarfontsConstants(title: 'Job Details', color: ColorConstants.blackColor, fontSize: 20),
                   Form(
                       child: Column(
                     children: [

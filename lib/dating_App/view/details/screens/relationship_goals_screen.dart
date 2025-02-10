@@ -1,3 +1,5 @@
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -39,13 +41,10 @@ class _RelationshipGoalsScreenState extends State<RelationshipGoalsScreen> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    "Relationship Goals",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
+                  AppbarfontsConstants(title: 'RelationShip Goals', color: ColorConstants.blackColor, fontSize: 20),
                   const SizedBox(height: 20),
                   CheckboxListTile(
-                    title: Text("Short Term Relationship"),
+                    title: Text("Short Term Relationship",style: TextStyle(color: ColorConstants.blackColor,fontSize: 18,),),
                     value: isEmployer,
                     onChanged: (value) {
                       setState(() {
@@ -55,7 +54,7 @@ class _RelationshipGoalsScreenState extends State<RelationshipGoalsScreen> {
                     controlAffinity: ListTileControlAffinity.leading,
                   ),
                   CheckboxListTile(
-                    title: Text("Long Term Relationship"),
+                    title: Text("Long Term Relationship",style: TextStyle(color: ColorConstants.blackColor,fontSize: 18,),),
                     value: isEmployee,
                     onChanged: (value) {
                       setState(() {

@@ -1,3 +1,5 @@
+import 'package:buddypair/common/appbarfonts_constants.dart';
+import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'sign_up_page.dart';
@@ -27,15 +29,12 @@ class LoginPageScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(children: [
-                  Text(
-                    'Login',
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
+                AppbarfontsConstants(title: 'Login', color: ColorConstants.blackColor, fontSize: 20),
                   SizedBox(
                     height: 20,
                   ),
                   Form(
-                      child: Column(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: 10,
@@ -67,34 +66,27 @@ class LoginPageScreen extends StatelessWidget {
                       CustomButtom(
                         boxcolor: Colors.black,
                         title: 'Log In',
-                        ontap: () {},
+                        ontap: () {
+                           Navigator.pushNamed(context, '/personalDetails'); 
+                        },
                       ),
                       SizedBox(
                         height: 20,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 214),
-                        child: Text('Forgot Paaword?'),
-                      ),
+                      AppbarfontsConstants(title: 'Forgot Password', color: ColorConstants.blackColor, fontSize: 20),
+                      
                       SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Row(
                         children: [
-                          Text('Don\'t have an account? '),
+                          AppbarfontsConstants(title: 'Don\'t have an account? ', color: ColorConstants.fontGrayColor, fontSize: 14),
+                       
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SignUpPageScreen()),
-                              );
+                               Navigator.pushNamed(context, '/signup'); 
                             },
-                            child: Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                  color: Colors.pinkAccent, fontSize: 15),
-                            ),
+                            child: AppbarfontsConstants(title: 'Sign Up', color: ColorConstants.pinkColor, fontSize: 14)
                           ),
                         ],
                       ),
