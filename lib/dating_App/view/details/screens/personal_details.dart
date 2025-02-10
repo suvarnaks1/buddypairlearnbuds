@@ -32,10 +32,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text(
-                      'Personal Details',
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
+                   AppbarfontsConstants(title: 'Personal Details', color: ColorConstants.blackColor, fontSize: 20),
                     SizedBox(
                       height: 10,
                     ),

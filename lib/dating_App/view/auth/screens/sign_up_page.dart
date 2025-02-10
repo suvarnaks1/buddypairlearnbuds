@@ -28,10 +28,8 @@ class SignUpPageScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
-              Text(
-                'Sign Up',
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
+             AppbarfontsConstants(title: 'Sign Up', color: ColorConstants.blackColor, fontSize: 20),
+       
               SizedBox(
                 height: 10,
               ),
@@ -181,10 +179,7 @@ class SignUpPageScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(context, '/loginup');
                     },
-                    child: Text('Login ',
-                        style: TextStyle(
-                          color: Color(0xFF4B164C),
-                        )),
+                    child: AppbarfontsConstants(title: 'Sign Up', color: ColorConstants.pinkColor, fontSize: 14)
                   )
                 ],
               )
