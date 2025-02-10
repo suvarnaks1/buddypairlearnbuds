@@ -14,8 +14,8 @@ import 'package:flutter/material.dart';
 import 'package:glass/glass.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../bottomNavigation_bar_screen.dart';
-import 'discover/screens/discover_screen.dart';
+import '../../bottomNavigation_bar_screen.dart';
+
 
 
 

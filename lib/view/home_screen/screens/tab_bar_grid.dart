@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreens> {
               Expanded(
                 child: TabBarView(children: [
                   LocationTab(),
-                  DesignationTab(),
+                 QualificationScreen(),
                  QualificationScreen()
               
                 ]),

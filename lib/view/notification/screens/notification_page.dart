@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../common/appbarfonts_constants.dart';
 
-
 class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,9 +22,7 @@ class NotificationPage extends StatelessWidget {
                 child: Center(
                   child: IconButton(
                     onPressed: () {},
-                    icon: Image(
-                        image:
-                            AssetImage('assets/images/notification_icon.png')),
+                    icon: Image(image: AssetImage('assets/images/belll.png')),
                   ),
                 ),
               ),
@@ -55,7 +52,7 @@ class NotificationPage extends StatelessWidget {
                         Spacer(),
                         IconButton(
                           onPressed: () {},
-                          icon: Image.asset('assets/images/close icon.png'),
+                          icon: Image.asset('assets/images/x.png'),
                         )
                       ],
                     ),
@@ -107,13 +104,14 @@ class NotificationPage extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Image(
-                            image:
-                                AssetImage('assets/images/success icon.png')),
-                      ),
+                          padding: const EdgeInsets.all(16.0),
+                          child: Image.asset(
+                            "assets/images/checkbutton.png",
+                            height: 14.85,
+                            width: 13.37,
+                          )),
                       SizedBox(
-                        height:  1,
+                        height: 1,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -137,7 +135,7 @@ class NotificationPage extends StatelessWidget {
                       Spacer(),
                       IconButton(
                         onPressed: () {},
-                        icon: Image.asset('assets/images/close icon.png'),
+                        icon: Image.asset('assets/images/x.png'),
                       ),
                     ],
                   ),
@@ -146,22 +144,23 @@ class NotificationPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              width: double.infinity,
-              height: 80,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xFF4B164C)),
-                  child: Column(children: [
+                width: double.infinity,
+                height: 80,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xFF4B164C)),
+                child: Column(children: [
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Image(
-                            image:
-                                AssetImage('assets/images/info icon.png')),
-                      ),
+                          padding: const EdgeInsets.all(16.0),
+                          child: Image.asset(
+                            'assets/images/warning.png',
+                            height: 14.85,
+                            width: 13.37,
+                          )),
                       SizedBox(
-                        height:  1,
+                        height: 1,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,32 +184,29 @@ class NotificationPage extends StatelessWidget {
                       Spacer(),
                       IconButton(
                         onPressed: () {},
-                        icon: Image.asset('assets/images/close icon.png'),
+                        icon: Image.asset('assets/images/x.png'),
                       ),
                     ],
                   ),
-                ])
-            ),
+                ])),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              width: double.infinity,
-              height: 80,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xFF4B164C)),
-                  child: Column(children: [
+                width: double.infinity,
+                height: 80,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xFF4B164C)),
+                child: Column(children: [
                   Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: Image(
-                            image:
-                                AssetImage('assets/images/error icon.png')),
+                        child:Image.asset('assets/images/cross.png',height: 14.85,width: 13.37,)
                       ),
                       SizedBox(
-                        height:  1,
+                        height: 1,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,12 +230,11 @@ class NotificationPage extends StatelessWidget {
                       Spacer(),
                       IconButton(
                         onPressed: () {},
-                        icon: Image.asset('assets/images/close icon.png'),
+                        icon: Image.asset('assets/images/x.png'),
                       ),
                     ],
                   ),
-                ])
-            ),
+                ])),
           ),
         ],
       ),

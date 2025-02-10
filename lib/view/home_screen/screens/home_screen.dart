@@ -1,10 +1,9 @@
-
-
 import 'package:buddypair/common/appbarfonts_constants.dart';
-
 import 'package:buddypair/common/color_constants.dart';
+import 'package:buddypair/view/drawer/left_side_drawer.dart';
+import 'package:buddypair/view/drawer/right_side_drawer.dart';
+import 'package:buddypair/view/notification/screens/notification_page.dart';
 import 'package:flutter/material.dart';
-import '../../drawer.dart';
 import 'story_page.dart';
 import 'tab_bar_grid.dart';
 
@@ -14,22 +13,20 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
- 
-      drawer: Rightsidemenu(),
+      drawer: Leftsidemenu(),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Row(
           children: [
-               Builder( 
-        builder: (context) => IconButton(
-          icon: Icon(Icons.menu, color: ColorConstants.primaryColor),
-          onPressed: () {
-            Scaffold.of(context).openDrawer(); 
-          },
-        ),
-      ),
+            Builder(
+              builder: (context) => IconButton(
+                icon: Icon(Icons.menu, color: ColorConstants.primaryColor),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+              ),
+            ),
             SizedBox(
               width: 5,
             ),
@@ -50,7 +47,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NotificationPage()),
+                      );
+                    },
                     icon: Icon(
                       Icons.notifications_on_outlined,
                       color: ColorConstants.primaryColor,
@@ -58,9 +61,18 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            const CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/images/profile pic 3.png'),
+            GestureDetector(
+              onTap: () {
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Rightsidemenu()),
+                      );
+              },
+              child: const CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage('assets/images/profile pic 3.png'),
+              ),
             )
           ],
         ),
@@ -79,5 +91,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
