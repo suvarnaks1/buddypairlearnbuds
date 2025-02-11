@@ -1,9 +1,8 @@
 
-
-
 import 'package:flutter/material.dart';
 
 import '../../common/color_constants.dart';
+import '../../dating_App/view/home_screen/screens/home_screen.dart';
 
 
 
@@ -18,6 +17,14 @@ class BottomNavMatrimony extends StatefulWidget {
 class _BottomNavState extends State<BottomNavMatrimony> {
   int _selectedIndex = 2; // Home is selected by default
 
+
+  final List<Widget> _pages = [
+    HomeScreen(),
+
+
+
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -27,14 +34,27 @@ class _BottomNavState extends State<BottomNavMatrimony> {
   @override
   Widget build(BuildContext context) {
 
-    return Container(
+    return Scaffold(
+        body: IndexedStack(
+          index: _selectedIndex,
+          children: _pages,
+        ),
+    bottomNavigationBar:
+
+
+     Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      decoration: BoxDecoration(
-        color: ColorConstants.whiteColor,
-        borderRadius: BorderRadius.circular(40), // Rounded shape
-
-      ),
+        
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(40),
+        color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 10,
+                spreadRadius: 2,
+              ),
+            ],),    
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -45,6 +65,7 @@ class _BottomNavState extends State<BottomNavMatrimony> {
           _buildNavItem(Icons.chat, 4),
         ],
       ),
+     ),
     );
   }
 
@@ -68,4 +89,3 @@ class _BottomNavState extends State<BottomNavMatrimony> {
     );
   }
 }
-
