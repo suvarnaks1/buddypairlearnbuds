@@ -138,7 +138,7 @@ class _PrivacySettingsScreenState extends State<PrivacySettingsScreen> {
         activeColor: ColorConstants.whiteColor,
         inactiveThumbColor: ColorConstants.whiteColor,
         inactiveTrackColor: ColorConstants.primaryColor,
-        activeTrackColor: ColorConstants.primaryColor,
+        activeTrackColor: ColorConstants.greenColor,
       ),
     );
   }

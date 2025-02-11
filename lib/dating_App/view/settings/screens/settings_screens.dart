@@ -11,7 +11,7 @@ class SettingsScreens extends StatefulWidget {
 }
 
 class _SettingsScreensState extends State<SettingsScreens> {
-bool isTwoFAEnabled = true;
+  bool isTwoFAEnabled = true;
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,11 @@ bool isTwoFAEnabled = true;
                               color: Color(0xFFF2F8F7),
                             ),
                             child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.key,color: Color(0xFF797C7B),))),
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.key,
+                                  color: Color(0xFF797C7B),
+                                ))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -149,7 +153,11 @@ bool isTwoFAEnabled = true;
                               color: Color(0xFFF2F8F7),
                             ),
                             child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.chat,color: Color(0xFF797C7B),))),
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.chat,
+                                  color: Color(0xFF797C7B),
+                                ))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -179,15 +187,18 @@ bool isTwoFAEnabled = true;
                     child: Row(
                       children: [
                         Container(
-                          height: 44,
-                          width: 44,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xFFF2F8F7),
-                          ),
-                          child: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.notifications_active,color: Color(0xFF797C7B),))),
-                        
+                            height: 44,
+                            width: 44,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Color(0xFFF2F8F7),
+                            ),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.notifications_active,
+                                  color: Color(0xFF797C7B),
+                                ))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -258,15 +269,19 @@ bool isTwoFAEnabled = true;
                     child: Row(
                       children: [
                         Container(
-                            height: 44,
-                            width: 44,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xFFF2F8F7),
-                            ),
-                            child: IconButton(onPressed: (){}, icon: Icon(Icons.storage,  color: Color(0xFF797C7B),)),
-                          
-                            ),
+                          height: 44,
+                          width: 44,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFFF2F8F7),
+                          ),
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.storage,
+                                color: Color(0xFF797C7B),
+                              )),
+                        ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -302,8 +317,7 @@ bool isTwoFAEnabled = true;
                             shape: BoxShape.circle,
                             color: Color(0xFFF2F8F7),
                           ),
-                          child: 
-                          Image.asset(
+                          child: Image.asset(
                             'assets/images/Users.png',
                             color: Color(0xFF797C7B),
                           ),
@@ -323,7 +337,7 @@ bool isTwoFAEnabled = true;
                       ],
                     ),
                   ),
-                    SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   SizedBox(
@@ -338,8 +352,7 @@ bool isTwoFAEnabled = true;
                             shape: BoxShape.circle,
                             color: Color(0xFFF2F8F7),
                           ),
-                          child: 
-                          Image.asset(
+                          child: Image.asset(
                             'assets/images/Users.png',
                             color: Color(0xFF797C7B),
                           ),
@@ -348,22 +361,23 @@ bool isTwoFAEnabled = true;
                           height: 10,
                         ),
                         BoldFontsConstants(
-                            title: 'Are You Interested to Show \n Your Profile On Similar Job',
+                            title:
+                                'Are You Interested to Show \n Your Profile On Similar Job',
                             color: ColorConstants.blackColor,
                             fontSize: 16),
-                            Spacer(),
-                                     Switch(
-                                    value: isTwoFAEnabled,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        isTwoFAEnabled = value;
-                                      });
-                                    },
-                                    activeColor: ColorConstants.whiteColor,
-                                    inactiveThumbColor: ColorConstants.whiteColor,
-                                    inactiveTrackColor: ColorConstants.primaryColor,
-                                    activeTrackColor: ColorConstants.primaryColor,
-                                  )
+                        Spacer(),
+                        Switch(
+                          value: isTwoFAEnabled,
+                          onChanged: (value) {
+                            setState(() {
+                              isTwoFAEnabled = value;
+                            });
+                          },
+                          activeColor: ColorConstants.whiteColor,
+                          inactiveThumbColor: ColorConstants.whiteColor,
+                          inactiveTrackColor: ColorConstants.primaryColor,
+                          activeTrackColor: ColorConstants.greenColor,
+                        )
                       ],
                     ),
                   ),
