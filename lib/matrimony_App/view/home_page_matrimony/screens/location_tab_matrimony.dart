@@ -28,7 +28,7 @@ class LocationTabMatrimony extends StatelessWidget {
               children: [
                 // Background Image
                 Image.asset(
-                  'assets/images/whitedemo.jpeg',
+                  'assets/images/download.jpg',
                   fit: BoxFit.cover,
                 ),
 
