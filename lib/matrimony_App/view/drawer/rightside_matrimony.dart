@@ -1,30 +1,33 @@
 import 'dart:ui';
 import 'package:buddypair/common/color_constants.dart';
+import 'package:buddypair/dating_App/view/requests/screens/Shortlisted_by_screen.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/accept_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/contacted_screen_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/recieved_screen_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/reject_screen_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/send_screen_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/settings_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/deatils_matrimony/shortlisted_screen_by_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/edit_my_profile/screens/edit_my_profile_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/edit_my_profile/screens/viewed_my_profile_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/messages_matrimony.dart';
 import 'package:flutter/material.dart';
 import 'package:glass/glass.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-import '../profile/screens/edit_profile.dart';
-import '../requests/screens/Accepted_screen.dart';
-import '../requests/screens/Contacted_screen.dart';
-import '../requests/screens/Received_screen.dart';
-import '../requests/screens/Shortlist_screen.dart';
-import '../requests/screens/Shortlisted_by_screen.dart';
-import '../requests/screens/messages.dart';
-import '../requests/screens/reject_screen.dart';
-import '../requests/screens/sent_screen.dart';
-import '../settings/screens/settings_screens.dart';
-import '../viewed_my_profile.dart';
+import '../deatils_matrimony/shortlist_screnn_matrimony.dart';
 
-class Rightsidemenu extends StatefulWidget {
-  const Rightsidemenu({super.key});
+
+
+class RightsideMatrimony extends StatefulWidget {
+  const RightsideMatrimony({super.key});
 
   @override
-  State<Rightsidemenu> createState() => _RightsidemenuState();
+  State<RightsideMatrimony> createState() => _RightsidemenuState();
 }
 
-class _RightsidemenuState extends State<Rightsidemenu> {
+class _RightsidemenuState extends State<RightsideMatrimony> {
   int _selectedIndex = 0;
   bool effectEnabled = true;
 
@@ -43,17 +46,17 @@ class _RightsidemenuState extends State<Rightsidemenu> {
   ];
 
   final List<Widget> pages = [ 
-    EditProfile(),
-    SentScreen(),
-    ViewedMyProfile(),
-    AcceptedScreen(),
-    RejectScreen(),
-    ReceivedScreen(),
-    ShortlistedByScreen(),
-    ShortlistScreen(),
-    ContactedScreen(),
-    Messages(),
-    SettingsScreens()
+    EditMyProfileMatrimony(),
+     SendScreenMatrimony(),
+    ViewedMyProfileMatrimony(),
+     AcceptMatrimony(),
+    RejectScreenMatrimony(),
+    RecievedScreenMatrimony(),
+    ShortlistedScreenByMatrimony(),
+    ShortlistScrennMatrimony(),
+    ContactedScreenMatrimony(),
+    MessagesMatrimony(),
+    SettingsMatrimony()
 
   
 ];
