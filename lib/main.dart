@@ -12,7 +12,7 @@ import 'package:buddypair/dating_App/view/details/screens/personal_details.dart'
 import 'package:buddypair/dating_App/view/details/screens/relationship_goals_screen.dart';
 import 'package:buddypair/dating_App/view/details/screens/seeker_job_details.dart';
 import 'package:flutter/material.dart';
-import 'dating_App/splash/screens/splash_screen.dart';
+import 'dating_App/view/splash/screens/splash_screen.dart';
 import 'dating_App/view/bottomNavigation_bar_screen.dart';
 import 'dating_App/view/auth/screens/sign_up_page.dart';
 import 'matrimony_App/view/additional_details_matrimony.dart';
