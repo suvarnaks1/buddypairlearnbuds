@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 10),
             const Story(),
             const SizedBox(height: 10),
-            Expanded(child: HomeScreens())
+            Expanded(child: TabBarGrid())
           ],
         ),
       ),
