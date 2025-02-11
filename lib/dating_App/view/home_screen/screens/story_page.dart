@@ -1,6 +1,7 @@
 
 import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:buddypair/common/color_constants.dart';
+import 'package:buddypair/dating_App/view/home_screen/screens/view_stories.dart';
 import 'package:flutter/material.dart';
 
 class Story extends StatelessWidget {
@@ -10,9 +11,9 @@ class Story extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Stack(
+        Stack(
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 38,
               backgroundImage: AssetImage("assets/images/Mask Group1.png"),
             ),
@@ -25,15 +26,23 @@ class Story extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor: Colors.blue,
                   radius: 8,
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                    size: 15,
-                  ),
+                  child:Center(
+                    child: IconButton(onPressed: (){
+  //                  Navigator.push(
+  //   context,
+  //   MaterialPageRoute(builder: (context) => ViewStory()),
+  // );
+                    }, icon:   Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 15,
+                    ),),
+                  )
+                 
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               top: 90,
               left: 8,
               child: Text(
