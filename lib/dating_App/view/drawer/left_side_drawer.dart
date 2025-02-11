@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:buddypair/dating_App/view/bottomNavigation_bar_screen.dart';
 import 'package:buddypair/dating_App/view/home_screen/screens/home_screen.dart';
 import 'package:buddypair/matrimony_App/view/additional_details_matrimony.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class _LeftSideMenuState extends State<LeftSideMenu> {
   ];
 
   final List<Widget> pages = [
-    HomeScreen(),
+   BottomNavBarExample(),
     MatrimonyAdditionaldetails()
   ];
 

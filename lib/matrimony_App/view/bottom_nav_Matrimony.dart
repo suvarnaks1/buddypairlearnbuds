@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/color_constants.dart';
 import '../../dating_App/view/home_screen/screens/home_screen.dart';
+import 'home_page_matrimony/screens/matrimony_home_Screen.dart';
 
 
 
@@ -19,8 +20,7 @@ class _BottomNavState extends State<BottomNavMatrimony> {
 
 
   final List<Widget> _pages = [
-    HomeScreen(),
-
+ MatrimonyHomeScreen()
 
 
   ];

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../common/appbarfonts_constants.dart';
 import '../../../../common/color_constants.dart';
 
-class RejectScreenMatrimony extends StatelessWidget {
-  const RejectScreenMatrimony({super.key});
+class MessagesMatrimony extends StatelessWidget {
+  const MessagesMatrimony({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,10 @@ class RejectScreenMatrimony extends StatelessWidget {
                     color: ColorConstants.whiteColor,
                   )),
               SizedBox(
-                width: 90,
+                width: 70,
               ),
               AppbarfontsConstants(
-                title: 'Reject',
+                title: 'Messages',
                 color: ColorConstants.whiteColor,
                 fontSize: 24,
               ),
@@ -43,7 +43,7 @@ class RejectScreenMatrimony extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
-          height: 1000,
+          height: 5000,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
@@ -65,13 +65,12 @@ class RejectScreenMatrimony extends StatelessWidget {
                       ))),
                 ),
                 AppbarfontsConstants(
-                    title: 'A',
-                    color: ColorConstants.blackColor,
-                    fontSize: 16),
+                    title: 'A', color: ColorConstants.blackColor, fontSize: 16),
                 SizedBox(
                   height: 10,
                 ),
                 Row(
+                
                   children: [
                     Container(
                       width: 60,
@@ -79,13 +78,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/profile pic 3.png'),
+                              image:
+                                  AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -99,12 +96,21 @@ class RejectScreenMatrimony extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
+                    Spacer(),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(
+                            image: AssetImage(
+                          'assets/images/x.png',
+                        ))),
                   ],
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Row(
+                 
                   children: [
                     Container(
                       width: 60,
@@ -112,13 +118,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/profile pic 3.png'),
+                              image:
+                                  AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -131,21 +135,24 @@ class RejectScreenMatrimony extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 AppbarfontsConstants(
-                    title: 'B',
-                    color: ColorConstants.blackColor,
-                    fontSize: 16),
+                    title: 'B', color: ColorConstants.blackColor, fontSize: 16),
                 SizedBox(
                   height: 10,
                 ),
         
                 Row(
+            
                   children: [
                     Container(
                       width: 60,
@@ -153,13 +160,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/profile pic 3.png'),
+                              image:
+                                  AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -172,7 +177,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
         
@@ -180,43 +189,48 @@ class RejectScreenMatrimony extends StatelessWidget {
                   height: 10,
                 ),
         
-                Row(children: [
-                  Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        image: DecorationImage(
-                            image:
-                                AssetImage('assets/images/profile pic 3.png'),
-                            fit: BoxFit.fill)),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                   
                     children: [
-                      AppbarfontsConstants(
-                          title: 'Bristy Haque',
-                          color: ColorConstants.blackColor,
-                          fontSize: 18),
-                      AppbarfontsConstants(
-                          title: 'Be your own hero 💪',
-                          color: ColorConstants.fontGrayColor,
-                          fontSize: 12),
-                    ],
-                  ),
-                ]),
+                      Container(
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/profile pic 3.png'),
+                                fit: BoxFit.fill)),
+                      ),
+                      SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AppbarfontsConstants(
+                              title: 'Bristy Haque',
+                              color: ColorConstants.blackColor,
+                              fontSize: 18),
+                          AppbarfontsConstants(
+                              title: 'Be your own hero 💪',
+                              color: ColorConstants.fontGrayColor,
+                              fontSize: 12),
+                        ],
+                      ),
+                      Spacer(),
+                       IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                      IconButton(
+                          onPressed: () {},
+                          icon:
+                              Image(image: AssetImage('assets/images/x.png'))),
+                    ]),
                 SizedBox(
                   height: 10,
                 ),
-                //.........................................
+        //.........................................
                 AppbarfontsConstants(
-                    title: 'S',
-                    color: ColorConstants.blackColor,
-                    fontSize: 16),
+                    title: 'S', color: ColorConstants.blackColor, fontSize: 16),
                 Row(
+                  
                   children: [
                     Container(
                       width: 60,
@@ -224,13 +238,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/profile pic 3.png'),
+                              image:
+                                  AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -244,6 +256,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                             fontSize: 12),
                       ],
                     ),
+                    Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(image: AssetImage('assets/images/x.png'))),
                   ],
                 ),
         
@@ -252,6 +269,7 @@ class RejectScreenMatrimony extends StatelessWidget {
                 ),
         
                 Row(
+            
                   children: [
                     Container(
                       width: 60,
@@ -259,13 +277,10 @@ class RejectScreenMatrimony extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/profile pic 3.png'),
+                              image:
+                                  AssetImage('assets/images/profile pic 3.png'),
                               fit: BoxFit.fill)),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    ),SizedBox(width: 10,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -278,7 +293,11 @@ class RejectScreenMatrimony extends StatelessWidget {
                             color: ColorConstants.fontGrayColor,
                             fontSize: 12),
                       ],
-                    ),
+                    ),Spacer(),
+                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image(image: AssetImage('assets/images/x.png')))
                   ],
                 ),
               ],
