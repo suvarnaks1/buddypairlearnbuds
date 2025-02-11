@@ -28,10 +28,10 @@ class Story extends StatelessWidget {
                   radius: 8,
                   child:Center(
                     child: IconButton(onPressed: (){
-  //                  Navigator.push(
-  //   context,
-  //   MaterialPageRoute(builder: (context) => ViewStory()),
-  // );
+                   Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => ViewStory()),
+  );
                     }, icon:   Icon(
                       Icons.add,
                       color: Colors.white,
