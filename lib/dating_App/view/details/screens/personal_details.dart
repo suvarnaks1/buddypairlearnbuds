@@ -1,10 +1,20 @@
+import 'dart:io';
+
 import 'package:buddypair/common/appbarfonts_constants.dart';
 import 'package:buddypair/common/color_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import '../../auth/screens/sign_up_page.dart';
 
-class PersonalDetailsScreen extends StatelessWidget {
-  const PersonalDetailsScreen({super.key});
+class PersonalDetailsScreen extends StatefulWidget {
+  PersonalDetailsScreen({super.key});
+
+  @override
+  State<PersonalDetailsScreen> createState() => _PersonalDetailsScreenState();
+}
+
+class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
+  File? _selectedImage;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +42,10 @@ class PersonalDetailsScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                   AppbarfontsConstants(title: 'Personal Details', color: ColorConstants.blackColor, fontSize: 20),
+                    AppbarfontsConstants(
+                        title: 'Personal Details',
+                        color: ColorConstants.blackColor,
+                        fontSize: 20),
                     SizedBox(
                       height: 10,
                     ),
@@ -146,15 +159,78 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       color: ColorConstants.fontGrayColor,
                                       fontSize: 16),
                                   IconButton(
-                                      onPressed: () {},
-                                      icon: 
-                                      Image(
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Container(
+                                                height: 150,
+                                                width: double.infinity,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      20.0),
+                                                  child: Column(
+                                                    children: [
+                                                      Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.camera_alt,
+                                                            color:
+                                                                ColorConstants
+                                                                    .blackColor,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 10,
+                                                          ),
+                                                          GestureDetector(
+                                                              onTap: () {
+                                                                _pickImageFromcameraPersonalDetails();
+                                                              },
+                                                              child: AppbarfontsConstants(
+                                                                  title:
+                                                                      "Camera",
+                                                                  color: ColorConstants
+                                                                      .blackColor,
+                                                                  fontSize: 18))
+                                                        ],
+                                                      ),
+                                                      SizedBox(
+                                                        height: 20,
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Image.asset(
+                                                            "assets/images/gallery.png",
+                                                            height: 20,
+                                                            width: 20,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 10,
+                                                          ),
+                                                          GestureDetector(
+                                                              onTap: () {
+                                                                _pickImageFromGalleryPersonalDetails();
+                                                              },
+                                                              child: AppbarfontsConstants(
+                                                                  title:
+                                                                      "Gallery",
+                                                                  color: ColorConstants
+                                                                      .blackColor,
+                                                                  fontSize: 18))
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              );
+                                            });
+                                          },
+                                      icon: Image(
                                         image: AssetImage(
                                           'assets/images/gallery.png',
                                         ),
                                         height: 30,
-                                      )
-                                      ),
+                                      )),
                                 ],
                               ),
                             ),
@@ -162,7 +238,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                           Container(
+                          Container(
                             decoration: BoxDecoration(
                               border: Border.all(width: 1.0),
                               borderRadius: BorderRadius.circular(10),
@@ -180,7 +256,72 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       color: ColorConstants.fontGrayColor,
                                       fontSize: 16),
                                   IconButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Container(
+                                                height: 150,
+                                                width: double.infinity,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.all(
+                                                      20.0),
+                                                  child: Column(
+                                                    children: [
+                                                      Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.camera_alt,
+                                                            color:
+                                                                ColorConstants
+                                                                    .blackColor,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 10,
+                                                          ),
+                                                          GestureDetector(
+                                                              onTap: () {
+                                                                _pickImageFromcameraPersonalDetailsAddMorePicture();
+                                                              },
+                                                              child: AppbarfontsConstants(
+                                                                  title:
+                                                                      "Camera",
+                                                                  color: ColorConstants
+                                                                      .blackColor,
+                                                                  fontSize: 18))
+                                                        ],
+                                                      ),
+                                                      SizedBox(
+                                                        height: 20,
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Image.asset(
+                                                            "assets/images/gallery.png",
+                                                            height: 20,
+                                                            width: 20,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 10,
+                                                          ),
+                                                          GestureDetector(
+                                                              onTap: () {
+                                                                _pickImageFromGalleryPersonalDetailsAddMorePicture();
+                                                              },
+                                                              child: AppbarfontsConstants(
+                                                                  title:
+                                                                      "Gallery",
+                                                                  color: ColorConstants
+                                                                      .blackColor,
+                                                                  fontSize: 18))
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              );
+                                            });
+                                      },
                                       icon: Image(
                                         image: AssetImage(
                                           'assets/images/gallery.png',
@@ -209,7 +350,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   AppbarfontsConstants(
-                                      title: 'Profile Pic ',
+                                      title: 'Short Reel ',
                                       color: ColorConstants.fontGrayColor,
                                       fontSize: 16),
                                   IconButton(
@@ -217,7 +358,8 @@ class PersonalDetailsScreen extends StatelessWidget {
                                       icon: Image(
                                         image: AssetImage(
                                           'assets/images/video-camera.png',
-                                        ),color: ColorConstants.blackColor,
+                                        ),
+                                        color: ColorConstants.blackColor,
                                         height: 30,
                                       )),
                                 ],
@@ -237,7 +379,7 @@ class PersonalDetailsScreen extends StatelessWidget {
                         ],
                       ),
                     ))
-                  ],
+                   ],
                 ),
               ),
             ),
@@ -245,5 +387,45 @@ class PersonalDetailsScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  // image  picker from gallery
+  Future _pickImageFromGalleryPersonalDetails() async {
+    final returnedImage =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (returnedImage == null) return;
+    setState(() {
+      _selectedImage = File(returnedImage!.path);
+    });
+  }
+
+  // image  picker from camera
+  Future _pickImageFromcameraPersonalDetails() async {
+    final returnedImage =
+        await ImagePicker().pickImage(source: ImageSource.camera);
+    if (returnedImage == null) return;
+    setState(() {
+      _selectedImage = File(returnedImage!.path);
+    });
+  }
+
+//add more camera section
+  Future _pickImageFromcameraPersonalDetailsAddMorePicture() async {
+    final returnedImage =
+        await ImagePicker().pickImage(source: ImageSource.camera);
+    if (returnedImage == null) return;
+    setState(() {
+      _selectedImage = File(returnedImage!.path);
+    });
+  }
+
+  //add more gallery section
+  Future _pickImageFromGalleryPersonalDetailsAddMorePicture() async {
+    final returnedImage =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (returnedImage == null) return;
+    setState(() {
+      _selectedImage = File(returnedImage!.path);
+    });
   }
 }
