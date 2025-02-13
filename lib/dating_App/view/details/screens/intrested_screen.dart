@@ -39,7 +39,7 @@ class IntrestedScreen extends StatelessWidget {
                     boxcolor: Colors.black,
                     title: 'Dating',
                     ontap: () {
-                      Navigator.pushNamed(context, '/buttomNavigation');
+                      Navigator.pushNamed(context, '/aditionalDeatails');
                     },
                   ),
                   SizedBox(height: 20),

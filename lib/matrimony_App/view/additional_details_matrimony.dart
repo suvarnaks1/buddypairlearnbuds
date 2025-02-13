@@ -260,7 +260,7 @@ class MatrimonyAdditionaldetails extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: () {
-                           Navigator.pushNamed(context, '/matrimonyBottomNav');
+                           Navigator.pushNamed(context, '/selectionScreen');
                         },
                         child: Container(
                           width: 300,

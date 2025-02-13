@@ -12,6 +12,7 @@ import 'package:buddypair/dating_App/view/details/screens/personal_details.dart'
 import 'package:buddypair/dating_App/view/details/screens/relationship_goals_screen.dart';
 import 'package:buddypair/dating_App/view/details/screens/seeker_job_details.dart';
 import 'package:flutter/material.dart';
+import 'dating_App/view/details/screens/intrested_in_screen.dart';
 import 'dating_App/view/splash/screens/splash_screen.dart';
 import 'dating_App/view/bottomNavigation_bar_screen.dart';
 import 'dating_App/view/auth/screens/sign_up_page.dart';
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
         '/discoverScreen':(context)=>DiscoverScreen(),
         '/sentScreen':(context)=>SentScreen(),
         '/filterScreen':(context)=>FilterScreen(),
+        '/aditionalDeatails':(context)=>MatrimonyAdditionaldetails(),
+        '/selectionScreen':(context)=>SelectionScreen(),
         //matrimony app
         '/matrimonyAdditionDetails':(context)=>MatrimonyAdditionaldetails(),
         '/matrimonyBottomNav':(context)=>BottomNavMatrimony()

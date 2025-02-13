@@ -3,11 +3,13 @@ import 'dart:ui';
 import 'package:buddypair/dating_App/view/bottomNavigation_bar_screen.dart';
 import 'package:buddypair/dating_App/view/home_screen/screens/home_screen.dart';
 import 'package:buddypair/matrimony_App/view/additional_details_matrimony.dart';
+import 'package:buddypair/matrimony_App/view/home_page_matrimony/screens/matrimony_home_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:glass/glass.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../common/color_constants.dart';
+import '../../../matrimony_App/view/bottom_nav_Matrimony.dart';
 
 
 class LeftSideMenu extends StatefulWidget {
@@ -32,7 +34,7 @@ class _LeftSideMenuState extends State<LeftSideMenu> {
 
   final List<Widget> pages = [
    BottomNavBarExample(),
-    MatrimonyAdditionaldetails()
+    BottomNavMatrimony()
   ];
 
   @override
